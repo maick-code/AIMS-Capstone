@@ -145,12 +145,17 @@ def train(
         logging_steps=10,
         report_to="none",
     )
-    trainer = Trainer(
+    # `tokenizer` a été renommé `processing_class` dans les transformers récents
+    # (et l'ancien nom a fini par être supprimé). On passe les deux via safe_init :
+    # le nom non supporté par la version installée est simplement ignoré.
+    trainer = safe_init(
+        Trainer,
         model=model,
         args=args,
         train_dataset=ds["train"],
         eval_dataset=ds["val"],
         tokenizer=tokenizer,
+        processing_class=tokenizer,
         data_collator=data_collator,
         compute_metrics=lambda p: compute_metrics(p, id2label),
     )
@@ -222,7 +227,10 @@ def push_to_hub(model_dir: Path, hub_model_id: str, model_name: str, metrics: di
     tokenizer = AutoTokenizer.from_pretrained(str(model_dir))
 
     card = _model_card(hub_model_id, model_name, metrics)
-    model.push_to_hub(hub_model_id, tokenizer=tokenizer, commit_message="Train VaxiMère intent classifier")
+    # Pousser modèle et tokenizer séparément (évite l'argument `tokenizer=` de
+    # push_to_hub, lui aussi sujet aux changements de signature entre versions).
+    model.push_to_hub(hub_model_id, commit_message="Train VaxiMère intent classifier")
+    tokenizer.push_to_hub(hub_model_id)
     # model card via README upload
     from huggingface_hub import HfApi
 

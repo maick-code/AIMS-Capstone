@@ -1,8 +1,21 @@
-# Sorties du pipeline (données générées, caches, modèles) — non versionnées.
-data/*
-!data/.gitkeep
+# --------------------------------------------------------------------------- #
+# Sorties du pipeline
+# --------------------------------------------------------------------------- #
+# Les LIVRABLES du dataset sont versionnés (ils sont petits et font partie du
+# dépôt) : data/vaximere_qa_cg_train.jsonl/.csv, data/faq_validee.json,
+# data/stats_report.json, data/DATA_CARD.md.
+# Les fichiers INTERMÉDIAIRES / caches et modèles entraînés sont ignorés :
+data/raw/
+data/interim/
+data/dryrun/
+data/splits/
+data/final/
+outputs/
+*.parquet
 
+# --------------------------------------------------------------------------- #
 # Python
+# --------------------------------------------------------------------------- #
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -10,7 +23,9 @@ __pycache__/
 venv/
 .ipynb_checkpoints/
 
+# --------------------------------------------------------------------------- #
 # Caches divers
+# --------------------------------------------------------------------------- #
 .cache/
 .pytest_cache/
 .mypy_cache/
