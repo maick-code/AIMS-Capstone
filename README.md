@@ -42,8 +42,7 @@ run_pipeline.py          # Point d'entrée CLI du pipeline
 push_to_hub.py           # Publication du dataset sur Hugging Face
 selftest.py              # Auto-test hors-ligne (45 vérifs, stdlib)
 selftest_split.py        # Auto-test du split sans fuite (24 vérifs, stdlib)
-VaxiMere_Colab.ipynb     # Notebook Colab : génération du dataset + push HF
-VaxiMere_Train_Colab.ipynb  # Notebook Colab : fine-tuning Phase 1 & 2
+VaxiMere_Colab.ipynb     # Notebook Colab : génération + entraînement + push HF
 DATA_CARD.md             # Sources / méthode / biais / limites / éthique
 ```
 
@@ -51,10 +50,10 @@ DATA_CARD.md             # Sources / méthode / biais / limites / éthique
 
 ### Google Colab (recommandé, GPU T4)
 
-- **Générer le dataset** : ouvrir `VaxiMere_Colab.ipynb` (installation, clone,
-  exécution du pipeline, publication sur Hugging Face).
-- **Entraîner le petit modèle** : ouvrir `VaxiMere_Train_Colab.ipynb`
-  (Phase 1 encodeur + Phase 2 LoRA).
+Ouvrir **`VaxiMere_Colab.ipynb`** : il installe les dépendances, clone le dépôt,
+génère le dataset v2 (~2 400 exemples), entraîne le petit modèle (Phase 1
+encodeur `glot500-base` + Phase 2 LoRA `Qwen2.5-0.5B`), puis pousse le dataset
+et le modèle sur Hugging Face (cellules optionnelles).
 
 ### Local
 

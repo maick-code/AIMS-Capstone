@@ -17,7 +17,7 @@ classifieur d'intentions (Gemma 3).
 |---|---|---|---|---|
 | `qanastek/frenchmedmcqa` | QCM médicaux (champ `question`) | fra | Apache-2.0 | Questions réelles FR, filtrées par mots-clés |
 | `ANR-MALADES/MediQAl` (config `oeq`) | Questions-réponses ouvertes | fra | CC-BY-4.0 | Questions réelles FR, filtrées par mots-clés |
-| `seed_curated` (banque interne) | ~270 questions rédigées à la main | fra | (création interne) | Socle garanti couvrant les 8 intentions |
+| `seed_curated` (banque interne) | ~432 questions rédigées (seed v1 + v2) | fra | (création interne) | Socle garanti couvrant les 8 intentions |
 | `masakhane/masakhanews` (config `lin`) | Actualités, catégorie `health` | lin | AFL-3.0 | **Optionnel** — non classé (pas de couverture zero-shot lingala) |
 
 **Remplacement de `blinoff/medical_qa_fr`** : ce dataset n'existe pas sur Hugging
@@ -38,14 +38,16 @@ seed.
    carnet vaccinal, fièvre après vaccin…), nettoyage (longueur 15–400 caractères),
    dédoublonnage exact + quasi-doublons (Jaccard ≥ 0.90).
 3. **Classification zero-shot** — `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`,
-   8 hypothèses en français, seuil de confiance **≥ 0.70**.
-4. **Traduction** — `facebook/nllb-200-distilled-600M` :
+   8 hypothèses en français, seuil de confiance **≥ 0.70** (sources HF).
+4. **Augmentation** — back-translation NLLB FR→EN→FR (+1 paraphrase/question)
+   pour diversifier le lexique de la banque seed.
+5. **Traduction** — `facebook/nllb-200-distilled-600M` :
    - lingala → `lin_Latn`
    - kituba → `kon_Latn` (kikongo, utilisé pour **simuler** le kituba : NLLB-200
      n'a pas de code dédié au kituba/munukutuba)
-5. **Équilibrage** — ~30 questions FR maîtresses/intention (≈ 1/3 seed + 2/3
-   sources réelles), chacune déclinée en 3 langues → ~90 exemples/intention.
-6. **Sortie** — `vaximere_qa_cg_train.jsonl` + versions par langue + FAQ.
+6. **Équilibrage** — ~100 questions FR maîtresses/intention (socle seed augmenté
+   + sources réelles), chacune déclinée en 3 langues → ~300 exemples/intention.
+7. **Sortie** — `vaximere_qa_cg_train.jsonl` + versions par langue + FAQ.
 
 **Schéma d'un exemple** :
 ```json
@@ -80,8 +82,9 @@ seed.
 - Les questions seed (surtout `RUMEUR_CROYANCE` et `HORS_DOMAINE_CLINIQUE`) sont
   **synthétiques** : elles modélisent des situations plausibles, pas des
   verbatims collectés.
-- Taille modeste (~700–800 exemples) : suffisant pour un LoRA, insuffisant pour
-  une évaluation robuste de la généralisation inter-dialectes.
+- Taille ~2 400 exemples : suffisant pour un LoRA ; la diversité intra-intention
+  repose sur la banque seed augmentée (back-translation), pas sur des verbatims
+  collectés, ce qui limite l'évaluation de la généralisation inter-dialectes.
 - La traduction NLLB n'est pas revue par un locuteur natif : erreurs possibles.
 - Licence NLLB **CC-BY-NC-4.0** : les traductions dérivées sont à usage
   **non commercial**, sauf à re-traduire avec un modèle sous licence permissive.

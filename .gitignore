@@ -1,10 +1,10 @@
 # --------------------------------------------------------------------------- #
 # Sorties du pipeline
 # --------------------------------------------------------------------------- #
-# Les LIVRABLES du dataset sont versionnés (ils sont petits et font partie du
-# dépôt) : data/vaximere_qa_cg_train.jsonl/.csv, data/faq_validee.json,
-# data/stats_report.json, data/DATA_CARD.md.
-# Les fichiers INTERMÉDIAIRES / caches et modèles entraînés sont ignorés :
+# Les livrables du dataset (data/final/) sont GÉNÉRÉS à l'exécution et ne sont
+# PAS versionnés : data/ ne contient qu'un .gitkeep. Ne les versionner/publier
+# qu'à la demande. Les fichiers intermédiaires, caches et modèles entraînés
+# sont ignorés :
 data/raw/
 data/interim/
 data/dryrun/
