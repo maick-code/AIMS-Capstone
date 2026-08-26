@@ -1,0 +1,12 @@
+# Dépendances du pipeline VaxiMère-QA-CG (compatible Google Colab GPU T4).
+# Installez avec : pip install -r requirements.txt
+# (Colab fournit déjà torch/transformers : cette liste sert surtout hors Colab.)
+
+datasets>=2.14
+transformers>=4.38
+pandas>=1.5
+numpy>=1.24
+torch>=2.0
+accelerate>=0.25
+sentencepiece>=0.1.99   # requis par le tokenizer NLLB-200 (m2m_100)
+huggingface_hub>=0.20
