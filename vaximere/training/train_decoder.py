@@ -34,6 +34,7 @@ import numpy as np
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+from vaximere.training.common import safe_init  # noqa: E402
 from vaximere.training.data_prep import load_jsonl, prepare  # noqa: E402
 
 INTENTS_STR = (
@@ -151,35 +152,48 @@ def train_lora(
     train_ds = train_ds.map(tokenize, batched=True, remove_columns=["text", "intention"])
     eval_ds = eval_ds.map(tokenize, batched=True, remove_columns=["text", "intention"])
 
-    # 4) entraînement (TRL si dispo, sinon Trainer générique)
+    # 4) entraînement (TRL si dispo, sinon Trainer générique ; repli sur erreur)
     try:
         from trl import SFTConfig, SFTTrainer
 
-        sft = SFTConfig(
-            output_dir=str(out_dir / "checkpoints"),
-            num_train_epochs=epochs,
-            per_device_train_batch_size=batch_size,
-            gradient_accumulation_steps=4,
-            learning_rate=lr,
-            logging_steps=5,
-            save_strategy="epoch",
-            report_to="none",
-            max_seq_length=max_length,
-            dataset_text_field="text",
-            seed=seed,
-        )
-        trainer = SFTTrainer(
-            model=model,
-            args=sft,
-            train_dataset=build_dataset(splits_dir, "train"),
-            tokenizer=tokenizer,
-        )
-        trainer.train()
+        _HAS_TRL = True
     except ImportError:
+        _HAS_TRL = False
+
+    trainer_ok = False
+    if _HAS_TRL:
+        try:
+            sft = safe_init(
+                SFTConfig,
+                output_dir=str(out_dir / "checkpoints"),
+                num_train_epochs=epochs,
+                per_device_train_batch_size=batch_size,
+                gradient_accumulation_steps=4,
+                learning_rate=lr,
+                logging_steps=5,
+                save_strategy="epoch",
+                report_to="none",
+                max_length=max_length,          # nom actuel (remplace max_seq_length)
+                dataset_text_field="text",
+                seed=seed,
+            )
+            trainer = SFTTrainer(
+                model=model,
+                args=sft,
+                train_dataset=build_dataset(splits_dir, "train"),
+                tokenizer=tokenizer,
+            )
+            trainer.train()
+            trainer_ok = True
+        except Exception as exc:  # noqa: BLE001 — repli propre
+            print(f"[train_decoder] SFTTrainer indisponible ({exc}) -> repli sur Trainer générique.")
+
+    if not trainer_ok:
         from transformers import DataCollatorForLanguageModeling, Trainer, TrainingArguments
 
         collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
-        args = TrainingArguments(
+        args = safe_init(
+            TrainingArguments,
             output_dir=str(out_dir / "checkpoints"),
             num_train_epochs=epochs,
             per_device_train_batch_size=batch_size,
@@ -190,8 +204,7 @@ def train_lora(
             report_to="none",
             seed=seed,
         )
-        trainer = Trainer(model=model, args=args, train_dataset=train_ds,
-                          data_collator=collator)
+        trainer = Trainer(model=model, args=args, train_dataset=train_ds, data_collator=collator)
         trainer.train()
 
     model.save_pretrained(str(out_dir / "adapter"))

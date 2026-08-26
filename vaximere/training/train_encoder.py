@@ -37,6 +37,7 @@ import numpy as np
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+from vaximere.training.common import safe_init  # noqa: E402
 from vaximere.training.data_prep import load_jsonl, prepare  # noqa: E402
 
 
@@ -127,7 +128,8 @@ def train(
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
     # 4) entraînement
-    args = TrainingArguments(
+    args = safe_init(
+        TrainingArguments,
         output_dir=str(out_dir / "checkpoints"),
         eval_strategy="epoch",  # nom actuel (remplace evaluation_strategy, supprimé)
         save_strategy="epoch",
