@@ -1,5 +1,5 @@
 # Sorties du pipeline (données générées, caches, modèles) — non versionnées.
-data/
+data/*
 !data/.gitkeep
 
 # Python
