@@ -1,28 +1,31 @@
 #!/usr/bin/env python3
-"""Auto-test du split (bibliothèque standard) sur les DONNÉES RÉELLES.
+"""Auto-test du split (bibliothèque standard) sur le dataset v2.
 
 Valide, sans torch/transformers :
-  * la structure du JSONL (240 questions maîtresses, 3 langues, intention unique) ;
-  * le retrait de la question d'examen hors sujet ;
-  * le split stratifié sans fuite inter-langues (une question et ses traductions
-    restent dans le même split) et l'équilibre des classes.
+  * la banque seed v2 (>= 50/intention) ;
+  * `prepare()` : split stratifié 70/15/15 SANS fuite inter-langues, sur un JSONL
+    v2 synthétique (1 maître = fra + lin + mkw, intention unique) ;
+  * l'équilibre par langue et par intention dans chaque split.
 
 Usage : python selftest_split.py
 """
 
 from __future__ import annotations
 
+import json
 import sys
 from collections import Counter
 from pathlib import Path
 
+from vaximere.config import INTENTS, LANGUES
+from vaximere.seed_questions_v2 import SEED_QUESTIONS_V2, validate_seed_v2
 from vaximere.training.data_prep import (
-    drop_bad,
     load_jsonl,
     parse_master_id,
     prepare,
     split_master_ids,
     validate_structure,
+    write_jsonl,
 )
 
 _ok = 0
@@ -37,57 +40,69 @@ def check(label: str, cond: bool) -> None:
         sys.exit(1)
 
 
-DATA = Path("data/vaximere_qa_cg_train.jsonl")
-rows = load_jsonl(DATA)
+# --------------------------------------------------------------------------- #
+# 1. Banque seed v2
+# --------------------------------------------------------------------------- #
+validate_seed_v2()
+texts = [t for t, _ in SEED_QUESTIONS_V2]
+intents = [i for _, i in SEED_QUESTIONS_V2]
+n_masters = len(texts)
+check(f"seed v2 : {n_masters} questions maîtresses", n_masters >= 400)
+cnt = Counter(intents)
+check("8 intentions, >= 50 chacune", all(cnt[i] >= 50 for i in INTENTS))
 
 # --------------------------------------------------------------------------- #
-# 1. Structure
+# 2. Construction d'un JSONL v2 synthétique (1 maître -> 3 langues)
 # --------------------------------------------------------------------------- #
-check("720 lignes brutes", len(rows) == 720)
-masters_raw = {parse_master_id(r["query_id"]) for r in rows}
-check("240 questions maîtresses brutes", len(masters_raw) == 240)
-master_intent = validate_structure(rows)
+tmp = Path("/tmp/vaximere_v2_synth.jsonl")
+rows = []
+for idx, (texte, intent) in enumerate(SEED_QUESTIONS_V2, start=1):
+    for lang, meta in LANGUES.items():
+        suffix = meta["suffix"]
+        rows.append({
+            "query_id": f"Q_{idx:03d}_{suffix}",
+            "texte": texte if lang == "fra" else f"[{suffix}] {texte}",
+            "langue": lang,
+            "intention": intent,
+            "faq_target_id": "FAQ_001",
+            "source": "seed_curated",
+            "score": 1.0,
+        })
+write_jsonl(rows, tmp)
+check(f"JSONL v2 synthétique : {len(rows)} lignes ({n_masters} maîtres x 3 langues)",
+      len(rows) == n_masters * 3)
+
+# --------------------------------------------------------------------------- #
+# 3. Structure
+# --------------------------------------------------------------------------- #
+loaded = load_jsonl(tmp)
+master_intent = validate_structure(loaded)
 check("structure valide (1 maître = fra+lin+mkw, intention unique)", True)
-check("8 intentions couvertes", len(set(master_intent.values())) == 8)
-check("30 maîtres par intention",
-      all(v == 30 for v in Counter(master_intent.values()).values()))
+check(f"{n_masters} maîtres détectés", len(master_intent) == n_masters)
 
 # --------------------------------------------------------------------------- #
-# 2. Retrait de la question d'examen
+# 4. Split stratifié sans fuite
 # --------------------------------------------------------------------------- #
-cleaned, dropped = drop_bad(rows)
-check("1 question maîtresse écartée (examen scanner)", dropped == {92} or len(dropped) == 1)
-check("717 lignes après nettoyage", len(cleaned) == 717)
-cleaned_intent = validate_structure(cleaned)
-cnt = Counter(cleaned_intent.values())
-check("HORS_DOMAINE à 29 maîtres après nettoyage", cnt["HORS_DOMAINE_CLINIQUE"] == 29)
-check("les 7 autres intentions restent à 30",
-      all(v == 30 for k, v in cnt.items() if k != "HORS_DOMAINE_CLINIQUE"))
-
-# --------------------------------------------------------------------------- #
-# 3. Split stratifié sans fuite
-# --------------------------------------------------------------------------- #
-tr, va, te = split_master_ids(cleaned_intent, train_frac=0.70, val_frac=0.15, seed=42)
+tr, va, te = split_master_ids(master_intent, train_frac=0.70, val_frac=0.15, seed=42)
 check("aucun chevauchement de maîtres entre splits", not (tr & va or tr & te or va & te))
-check("tous les maîtres répartis", len(tr) + len(va) + len(te) == len(cleaned_intent))
+check("tous les maîtres répartis", len(tr) + len(va) + len(te) == n_masters)
 
-# équilibre par intention (HORS_DOMAINE = 29 -> 20/4/5 ; autres = 30 -> 21/4/5)
-for intent, n in cnt.items():
-    n_tr = sum(1 for m in tr if cleaned_intent[m] == intent)
-    n_va = sum(1 for m in va if cleaned_intent[m] == intent)
-    n_te = sum(1 for m in te if cleaned_intent[m] == intent)
-    exp_tr = n - n // 10 - 4 if False else (20 if n == 29 else 21)
-    check(f"{intent}: train={n_tr} val={n_va} test={n_te}", n_tr + n_va + n_te == n and n_tr in (20, 21))
+for intent in INTENTS:
+    n = cnt[intent]
+    n_tr = sum(1 for m in tr if master_intent[m] == intent)
+    n_va = sum(1 for m in va if master_intent[m] == intent)
+    n_te = sum(1 for m in te if master_intent[m] == intent)
+    check(f"{intent}: train={n_tr} val={n_va} test={n_te} (sur {n})",
+          n_tr + n_va + n_te == n and n_tr > n_va > 0 and n_te > 0 and n_tr > n_te)
 
 # --------------------------------------------------------------------------- #
-# 4. Pipeline complet + fichiers de sortie
+# 5. Pipeline prepare() complet + fichiers de sortie
 # --------------------------------------------------------------------------- #
-out = Path("/tmp/vaximere_splits_test")
-manifest = prepare(DATA, out, fractions=(0.70, 0.15, 0.15), seed=42)
-check("manifest : 717 lignes conservées", manifest["n_kept_rows"] == 717)
-check("manifest : 239 maîtres", manifest["n_masters"] == 239)
-check("somme train+val+test = 717",
-      sum(manifest["per_split_rows"].values()) == 717)
+out = Path("/tmp/vaximere_v2_splits")
+manifest = prepare(tmp, out, fractions=(0.70, 0.15, 0.15), seed=42)
+check("manifest : tous les maîtres conservés", manifest["n_masters"] == n_masters)
+check("somme train+val+test = 3 x maîtres",
+      sum(manifest["per_split_rows"].values()) == n_masters * 3)
 for name in ("train", "val", "test"):
     check(f"{name}.jsonl écrit", (out / f"{name}.jsonl").exists())
     check(f"{name} : 3 langues équilibrées",

@@ -1,9 +1,17 @@
-"""Orchestrateur du pipeline VaxiMère-QA-CG (étapes 0 à 7).
+"""Orchestrateur du pipeline VaxiMère-QA-CG (dataset v2, étapes 0 à 8).
 
 Usage :
     python -m vaximere.pipeline --mode full
     python -m vaximere.pipeline --mode dryrun       # test sans modèle ni réseau
     python -m vaximere.pipeline --mode full --skip-translation
+
+Dataset v2 (refonte après le diagnostic 0.375 de la Phase 1) :
+    0. banque seed v2 (`seed_questions_v2.py`, ~54 questions FR/intention) ;
+    1. extraction HF ; 2. filtrage ; 3. zero-shot des sources HF ;
+    3b. chargement NLLB (partagé) ;
+    4. augmentation par back-translation FR->EN->FR (`augment.py`) ;
+    5. traduction lingala/kituba ; 6. assemblage ; 7. contrôles ; 8. sorties.
+    Équilibrage final : ~100 maîtres FR/intention x 3 langues ~= 2400 exemples.
 
 Le mode `dryrun` utilise des classifieur/traducteur factices (aucun téléchargement
 de modèle) et écrit dans `data/dryrun/` : il permet de valider le câblage complet
@@ -19,6 +27,7 @@ from typing import Optional
 import pandas as pd
 
 from .config import (
+    AUGMENT_PARAPHRASES,
     DRYRUN_DIR,
     FINAL_DIR,
     INCLUDE_MASAKHANEWS,
@@ -37,11 +46,12 @@ from .utils import (
     save_json,
     set_seed,
 )
+from .augment import augment_df
 from .build_dataset import assemble_rows, balance_intents, quality_checks, write_outputs
 from .extract import extract_all
 from .faq_validate import build_faq
 from .filter_clean import run_filter
-from .seed_questions import build_seed_df, validate_seed
+from .seed_questions_v2 import build_seed_df, validate_seed_v2
 
 
 # --------------------------------------------------------------------------- #
@@ -65,11 +75,11 @@ class _MockClassifier:
 
 class _MockTranslator:
     def __init__(self) -> None:
-        LOG.info("DRYRUN : traducteur factice (préfixes [lin]/[kt] factices).")
+        LOG.info("DRYRUN : traducteur factice (préfixes [code] factices).")
 
     def translate(self, texts, src_code=None, tgt_code=None):
-        tag = {"lin_Latn": "[lin]", "kon_Latn": "[kt]"}.get(tgt_code, "[?]")
-        return [f"{tag} {t}" for t in texts]
+        tag = tgt_code or "?"
+        return [f"[{tag}] {t}" for t in texts]
 
 
 def _filter_by_score(df, min_score=MIN_SCORE):
@@ -97,10 +107,10 @@ def run_pipeline(
     LOG.info("=== Pipeline VaxiMère-QA-CG (mode=%s) ===", mode)
 
     # ---------------------------------------------------------------- Étape 0
-    with Timer("Étape 0 — Banque seed"):
-        validate_seed()
+    with Timer("Étape 0 — Banque seed v2"):
+        validate_seed_v2()
         seed_df = build_seed_df()
-        print_intent_distribution(seed_df, label="seed (avant filtrage)")
+        print_intent_distribution(seed_df, label="seed v2 (avant filtrage)")
 
     # ---------------------------------------------------------------- Étape 1
     with Timer("Étape 1 — Extraction Hugging Face"):
@@ -111,10 +121,10 @@ def run_pipeline(
         # La banque seed est déjà ciblée : pas de filtre de domaine.
         seed_clean = run_filter(seed_df, apply_domain=False)
         real_clean = run_filter(real_df, apply_domain=True)
-        print_intent_distribution(seed_clean, label="seed (après filtrage)")
+        print_intent_distribution(seed_clean, label="seed v2 (après filtrage)")
 
     # ---------------------------------------------------------------- Étape 3
-    with Timer("Étape 3 — Classification zero-shot"):
+    with Timer("Étape 3 — Classification zero-shot (sources HF)"):
         if real_clean is None or real_clean.empty:
             real_kept = pd.DataFrame(columns=seed_clean.columns)
             LOG.info("Aucune source HF : classification zero-shot sautée.")
@@ -128,37 +138,50 @@ def run_pipeline(
             real_kept = classifier.classify_df(real_clean)
             real_kept = filter_by_score(real_kept)
 
+    # ---------------------------------------------------------------- Étape 3b
+    # Chargement du traducteur NLLB une seule fois : il sert à la fois à
+    # l'augmentation (back-translation) et à la traduction lin/kt.
+    translator = None
+    if skip_translation:
+        LOG.info("Traduction/augmentation sautées (--skip-translation).")
+    else:
+        if dryrun:
+            translator = _MockTranslator()
+        else:
+            from .translate import NLLBTranslator
+
+            translator = NLLBTranslator()
+
+    # ---------------------------------------------------------------- Étape 4
+    with Timer("Étape 4 — Augmentation par back-translation (FR->EN->FR)"):
+        if translator is None:
+            seed_aug = seed_clean
+        else:
+            seed_aug = augment_df(seed_clean, translator, n_paraphrases=AUGMENT_PARAPHRASES)
+        print_intent_distribution(seed_aug, label="seed v2 augmentée")
+
     # --------------------------------------------------- Pool + équilibrage
     with Timer("Pool + équilibrage par intention"):
-        pool = pd.concat([seed_clean, real_kept], ignore_index=True)
+        pool = pd.concat([seed_aug, real_kept], ignore_index=True)
         pool = dedupe_df(pool)
         balanced_fr = balance_intents(pool, per_intent=target)
         print_intent_distribution(balanced_fr, label="questions FR maîtresses équilibrées")
 
-    # ---------------------------------------------------------------- Étape 4
+    # ---------------------------------------------------------------- Étape 5
     translations = pd.DataFrame(columns=["master_id", "langue", "texte"])
-    translator = None
-    if skip_translation:
-        LOG.info("Traduction sautée (--skip-translation).")
-    else:
-        with Timer("Étape 4 — Traduction lingala / kituba"):
-            if dryrun:
-                translator = _MockTranslator()
-            else:
-                from .translate import NLLBTranslator
-
-                translator = NLLBTranslator()
+    if translator is not None:
+        with Timer("Étape 5 — Traduction lingala / kituba"):
             from .translate import translate_df
 
             translations = translate_df(balanced_fr, translator)
 
-    # ---------------------------------------------------------------- Étape 5
-    with Timer("Étape 5 — Assemblage du dataset final"):
+    # ---------------------------------------------------------------- Étape 6
+    with Timer("Étape 6 — Assemblage du dataset final"):
         final = assemble_rows(balanced_fr, translations)
         LOG.info("Dataset final : %d lignes.", len(final))
 
-    # ---------------------------------------------------------------- Étape 6
-    with Timer("Étape 6 — Contrôles qualité"):
+    # ---------------------------------------------------------------- Étape 7
+    with Timer("Étape 7 — Contrôles qualité"):
         stats, issues = quality_checks(final)
         stats["mode"] = mode
         stats["target_per_intent_fr"] = target
@@ -174,8 +197,8 @@ def run_pipeline(
         else:
             LOG.info("Tous les contrôles qualité sont satisfaits.")
 
-    # ---------------------------------------------------------------- Étape 7
-    with Timer("Étape 7 — Écriture des sorties"):
+    # ---------------------------------------------------------------- Étape 8
+    with Timer("Étape 8 — Écriture des sorties"):
         out_dir = DRYRUN_DIR if dryrun else FINAL_DIR
         paths = write_outputs(final, stats, out_dir=out_dir)
 
