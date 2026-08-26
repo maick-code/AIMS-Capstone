@@ -5,50 +5,65 @@ dataset d'intentions multilingue (français `fra`, lingala `lin`, kituba `mkw`)
 sur la **vaccination pédiatrique au Congo-Brazzaville**, prêt pour le fine-tuning
 **LoRA** d'un classifieur d'intentions (Gemma 3).
 
-- **~700–800 exemples** (8 intentions × ~30 questions FR maîtresses × 3 langues)
+## Dataset
+
 - **8 intentions** : `UTILITE_VACCIN`, `SECURITE_VACCIN`, `CALENDRIER_RDV`,
   `RETARD_RATTRAPAGE`, `EFFET_SECONDAIRE`, `RUMEUR_CROYANCE`,
   `LOCALISATION_ACCES`, `HORS_DOMAINE_CLINIQUE`
-- Sortie JSONL au format instruction-tuning + FAQ validée + DATA_CARD
+- **Volume v2** : ~100 questions FR maîtresses/intention × 3 langues ≈ **2 400 exemples**
+- **Méthode** : banque seed rédigée (seed v1 + v2, ~54/intention) + augmentation
+  par back-translation NLLB (FR→EN→FR) + traductions lingala/kituba
+- Sortie JSONL + FAQ validée + DATA_CARD
 
 ## Arborescence
 
 ```
 vaximere/
-├── config.py          # chemins, seuils, modèles, intentions, langues
-├── utils.py           # logging, nettoyage, dédoublonnage, I/O JSONL/CSV
-├── keywords.py        # mots-clés de domaine + hypothèses zero-shot
-├── seed_questions.py  # ~270 questions FR rédigées (socle garanti)
-├── extract.py         # Étape 1 : chargement Hugging Face (+ cache)
-├── filter_clean.py    # Étape 2 : filtrage mots-clés + nettoyage + dédup
-├── classify.py        # Étape 3 : zero-shot (mDeBERTa-v3, seuil 0.70)
-├── translate.py       # Étape 4 : NLLB-200 FR -> lin_Latn / kon_Latn
-├── build_dataset.py   # Étapes 5-6 : assemblage, équilibrage, qualité
-├── faq_validate.py    # Bonus : FAQ 40 entrées « à valider par un médecin »
-└── pipeline.py        # Orchestrateur (étapes 0 à 7)
-run_pipeline.py        # Point d'entrée CLI
-selftest.py            # Auto-test hors-ligne (stdlib seule)
-VaxiMere_Colab.ipynb   # Notebook Colab
-DATA_CARD.md           # Sources / méthode / biais / limites / éthique
+├── config.py            # chemins, seuils, modèles, intentions, langues
+├── utils.py             # logging, dédoublonnage, I/O JSONL/CSV
+├── textutils.py         # nettoyage/dédoublonnage (stdlib)
+├── keywords.py          # mots-clés de domaine + hypothèses zero-shot
+├── seed_questions.py    # banque seed v1 (~34 questions/intention)
+├── seed_questions_v2.py # banque seed v2 (v1 + ~20/intention ≈ 54/intention)
+├── intent_rubric.md     # taxonomie v2 + règles d'or des paires ambiguës
+├── extract.py           # Étape 1 : chargement Hugging Face
+├── filter_clean.py      # Étape 2 : filtrage mots-clés + nettoyage
+├── classify.py          # Étape 3 : zero-shot (mDeBERTa-v3, seuil 0.70)
+├── augment.py           # Étape 4 : back-translation FR→EN→FR (NLLB)
+├── translate.py         # Étape 5 : NLLB FR → lin_Latn / kon_Latn
+├── build_dataset.py     # Étapes 6-7 : assemblage, équilibrage, qualité
+├── faq_validate.py      # Bonus : FAQ 40 entrées « à valider par un médecin »
+├── pipeline.py          # Orchestrateur (étapes 0 à 8)
+└── training/            # Fine-tuning du petit modèle (Phase 1 & 2)
+    ├── data_prep.py     #   split sans fuite (70/15/15 stratifié)
+    ├── train_encoder.py #   Phase 1 : classifieur encodeur (glot500-base)
+    └── train_decoder.py #   Phase 2 : petit LLM + LoRA (Qwen2.5-0.5B)
+run_pipeline.py          # Point d'entrée CLI du pipeline
+push_to_hub.py           # Publication du dataset sur Hugging Face
+selftest.py              # Auto-test hors-ligne (45 vérifs, stdlib)
+selftest_split.py        # Auto-test du split sans fuite (24 vérifs, stdlib)
+VaxiMere_Colab.ipynb     # Notebook Colab : génération du dataset + push HF
+VaxiMere_Train_Colab.ipynb  # Notebook Colab : fine-tuning Phase 1 & 2
+DATA_CARD.md             # Sources / méthode / biais / limites / éthique
 ```
 
 ## Démarrage rapide
 
 ### Google Colab (recommandé, GPU T4)
 
-Ouvrir `VaxiMere_Colab.ipynb`, ou exécuter :
-
-```bash
-pip install -r requirements.txt
-python run_pipeline.py --mode dryrun   # test rapide (aucun modèle téléchargé)
-python run_pipeline.py --mode full     # pipeline complet (modèles HF)
-```
+- **Générer le dataset** : ouvrir `VaxiMere_Colab.ipynb` (installation, clone,
+  exécution du pipeline, publication sur Hugging Face).
+- **Entraîner le petit modèle** : ouvrir `VaxiMere_Train_Colab.ipynb`
+  (Phase 1 encodeur + Phase 2 LoRA).
 
 ### Local
 
 ```bash
-python selftest.py                    # validation hors-ligne (stdlib)
-python run_pipeline.py --mode full    # nécessite torch/transformers/datasets
+pip install -r requirements.txt        # pipeline
+pip install -r requirements_train.txt  # entraînement (en plus du précédent)
+python selftest.py                     # validation hors-ligne (stdlib)
+python run_pipeline.py --mode dryrun   # test rapide (aucun modèle téléchargé)
+python run_pipeline.py --mode full     # pipeline complet (modèles HF)
 ```
 
 ## Sorties (`data/final/`)
@@ -76,4 +91,4 @@ python run_pipeline.py --mode full    # nécessite torch/transformers/datasets
 ```
 
 Voir `DATA_CARD.md` pour les sources, les biais linguistiques, les limites et les
-considérations éthiques.
+considérations éthiques. Licence du dataset : `cc-by-nc-4.0`.

@@ -37,7 +37,7 @@ language:
   - kg
 pretty_name: VaxiMère-QA-CG
 size_categories:
-  - n<1K
+  - 1K<n<10K
 tags:
   - vaccination
   - pediatric
@@ -72,8 +72,8 @@ Chaque exemple est un JSON avec 7 champs :
 }
 ```
 
-- **720 exemples** = 240 français + 240 lingala + 240 kituba
-- **8 intentions** × 90 exemples :
+- **~2400 exemples** = ~800 par langue (français / lingala / kituba)
+- **8 intentions** × ~300 exemples :
 
   `UTILITE_VACCIN`, `SECURITE_VACCIN`, `CALENDRIER_RDV`, `RETARD_RATTRAPAGE`,
   `EFFET_SECONDAIRE`, `RUMEUR_CROYANCE`, `LOCALISATION_ACCES`,
@@ -82,13 +82,15 @@ Chaque exemple est un JSON avec 7 champs :
 ## Construction
 
 1. **Extraction** : `qanastek/frenchmedmcqa` (Apache-2.0), `ANR-MALADES/MediQAl`
-   config `oeq` (CC-BY-4.0), complétés par une banque de ~272 questions rédigées
-   (`source=seed_curated`).
+   config `oeq` (CC-BY-4.0), complétés par une banque de ~432 questions rédigées
+   (seed v1 + v2, `source=seed_curated`).
 2. **Filtrage** : mots-clés du domaine vaccination pédiatrique (rougeole, polio,
    BCG, Penta, carnet vaccinal, fièvre après vaccin…).
 3. **Classification zero-shot** : `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`,
    seuil de confiance ≥ 0.70.
-4. **Traduction** : `facebook/nllb-200-distilled-600M` (CC-BY-NC-4.0) vers
+4. **Augmentation** : back-translation NLLB FR→EN→FR (+1 paraphrase/question)
+   pour diversifier le lexique.
+5. **Traduction** : `facebook/nllb-200-distilled-600M` (CC-BY-NC-4.0) vers
    `lin_Latn` (lingala) et `kon_Latn` (kikongo, utilisé pour simuler le kituba,
    NLLB n'ayant pas de code kituba dédié).
 
@@ -189,7 +191,7 @@ def main(argv=None) -> None:
         repo_id=args.repo_id,
         private=args.private,
         token=token,
-        commit_message="Add VaxiMère-QA-CG train split (720 ex, fr/lin/kituba)",
+        commit_message="Add VaxiMère-QA-CG train split (~2400 ex, fr/lin/kituba)",
     )
     print(f"✅ Dataset poussé : https://huggingface.co/datasets/{args.repo_id}")
 
