@@ -162,29 +162,35 @@ def train(
     )
     trainer.train()
 
-    # 5) évaluation sur le test (global + par langue)
+    # 5) sauvegarde du modèle final AVANT le calcul des métriques (défensif :
+    #    si un calcul échoue, le modèle reste quand même sur disque).
+    out_dir.mkdir(parents=True, exist_ok=True)
+    trainer.save_model(str(out_dir / "model"))
+    tokenizer.save_pretrained(str(out_dir / "model"))
+
+    # 6) évaluation sur le test (global + par langue).
+    #    Les langues sont relues depuis le JSONL brut (ordre identique à ds["test"],
+    #    qui a été construit via Dataset.from_list puis .map sans réordonnancement).
     eval_results = trainer.evaluate(ds["test"], metric_key_prefix="test")
     preds_out = trainer.predict(ds["test"])
     y_true = preds_out.label_ids
     y_pred = np.argmax(preds_out.predictions, axis=-1)
+    test_langues = [r["langue"] for r in load_jsonl(splits_dir / "test.jsonl")]
 
-    report = _classification_report(y_true, y_pred, id2label, ds["test"])
+    report = _classification_report(y_true, y_pred, id2label, test_langues)
     report["eval_results"] = eval_results
     report["manifest"] = manifest
 
-    out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "metrics.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    trainer.save_model(str(out_dir / "model"))
-    tokenizer.save_pretrained(str(out_dir / "model"))
 
     print("\n=== Résultats (test) ===")
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return report
 
 
-def _classification_report(y_true, y_pred, id2label, test_ds) -> dict:
+def _classification_report(y_true, y_pred, id2label, langues: list[str]) -> dict:
     import pandas as pd
     from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, f1_score
 
@@ -200,8 +206,8 @@ def _classification_report(y_true, y_pred, id2label, test_ds) -> dict:
         ),
     }
 
-    # par langue
-    langues = test_ds["langue"]
+    # par langue (les langues sont alignées sur y_true/y_pred, même ordre)
+    langues = list(langues)
     report["accuracy_par_langue"] = {}
     for lang in sorted(set(langues)):
         idx = [i for i, l in enumerate(langues) if l == lang]
