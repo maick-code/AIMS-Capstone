@@ -98,8 +98,6 @@ def train(
     seed: int = 42,
     keep_all: bool = False,
 ) -> dict:
-    import torch
-    from datasets import Dataset
     from transformers import (
         AutoModelForSequenceClassification,
         AutoTokenizer,
@@ -131,7 +129,7 @@ def train(
     # 4) entraînement
     args = TrainingArguments(
         output_dir=str(out_dir / "checkpoints"),
-        evaluation_strategy="epoch",
+        eval_strategy="epoch",  # nom actuel (remplace evaluation_strategy, supprimé)
         save_strategy="epoch",
         load_best_model_at_end=True,
         metric_for_best_model="f1_macro",
@@ -141,10 +139,9 @@ def train(
         num_train_epochs=epochs,
         weight_decay=0.01,
         warmup_ratio=0.1,
-        fp16=torch.cuda.is_available(),
         seed=seed,
         logging_steps=10,
-        report_to=["none"],
+        report_to="none",
     )
     trainer = Trainer(
         model=model,

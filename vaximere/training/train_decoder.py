@@ -1,7 +1,9 @@
 """Phase 2 — Petit LLM décodeur + LoRA (instruction tuning) pour les intentions.
 
 Reproduit la cible finale (Gemma 3 + LoRA) avec un petit modèle tenant sur T4 :
-par défaut `google/gemma-2-2b-it` (ajustable : `--model-name`).
+par défaut `Qwen/Qwen2.5-0.5B-Instruct` (non gated, Apache-2.0 — ajustable via
+`--model-name`). Les modèles Gemma sont "gated" : il faut accepter leur licence
+sur le Hub avant de pouvoir les télécharger.
 
 Déroulement :
     1. Splits via `data_prep.prepare()` (mêmes splits que la Phase 1).
@@ -72,7 +74,7 @@ def build_dataset(splits_dir: Path, split: str):
 def train_lora(
     jsonl_path: Path,
     out_dir: Path,
-    model_name: str = "google/gemma-2-2b-it",
+    model_name: str = "Qwen/Qwen2.5-0.5B-Instruct",
     epochs: int = 3,
     batch_size: int = 2,
     lr: float = 2e-4,
@@ -89,10 +91,19 @@ def train_lora(
     eval_ds = build_dataset(splits_dir, "val")
     test_rows = load_jsonl(splits_dir / "test.jsonl")
 
-    # 2) tokenizer + modèle quantifié
+    # 2) tokenizer + modèle quantifié (avec message clair si le modèle est gated)
     from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+    except Exception as exc:  # noqa: BLE001 — message explicite pour l'utilisateur
+        raise SystemExit(
+            f"\n❌ Impossible de charger le tokenizer de `{model_name}`.\n"
+            "   Cause fréquente : modèle « gated » (ex. Gemma, Llama) nécessitant\n"
+            "   d'accepter la licence sur sa page Hugging Face. Sinon, utilisez un\n"
+            "   modèle non gated : --model-name Qwen/Qwen2.5-0.5B-Instruct\n"
+            f"   Détail : {exc}"
+        )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
@@ -104,12 +115,19 @@ def train_lora(
             bnb_4bit_quant_type="nf4",
             bnb_4bit_compute_dtype=torch.bfloat16,
         )
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        quantization_config=bnb,
-        device_map="auto",
-        torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
-    )
+    try:
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            quantization_config=bnb,
+            device_map="auto",
+            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+        )
+    except Exception as exc:  # noqa: BLE001
+        raise SystemExit(
+            f"\n❌ Impossible de charger le modèle `{model_name}`.\n"
+            "   Cause fréquente : modèle « gated » ou quota de téléchargement.\n"
+            f"   Détail : {exc}"
+        )
 
     # 3) LoRA
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
@@ -170,7 +188,6 @@ def train_lora(
             logging_steps=5,
             save_strategy="epoch",
             report_to="none",
-            fp16=False,
             seed=seed,
         )
         trainer = Trainer(model=model, args=args, train_dataset=train_ds,
@@ -252,7 +269,8 @@ def main(argv=None) -> None:
     p = argparse.ArgumentParser(description="Phase 2 : LLM + LoRA VaxiMère")
     p.add_argument("--jsonl", default="data/vaximere_qa_cg_train.jsonl")
     p.add_argument("--out", default="outputs/decoder_lora")
-    p.add_argument("--model-name", default="google/gemma-2-2b-it")
+    p.add_argument("--model-name", default="Qwen/Qwen2.5-0.5B-Instruct",
+                   help="modèle décodeur (non gated par défaut ; Gemma/Llama sont gated)")
     p.add_argument("--epochs", type=int, default=3)
     p.add_argument("--batch-size", type=int, default=2)
     p.add_argument("--lr", type=float, default=2e-4)
