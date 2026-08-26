@@ -1,0 +1,721 @@
+query_id,texte,langue,intention,faq_target_id,source,score
+Q_001_FR,Pourquoi vacciner mon enfant même s'il semble en bonne santé,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_002_FR,Pourquoi le vaccin contre la coqueluche est-il important pour les bébés,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_003_FR,Pourquoi le vaccin de la rougeole se donne à neuf mois,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_004_FR,Le vaccin protège-t-il contre la paralysie,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_005_FR,Pourquoi les vaccins sont-ils importants pour la santé de mon enfant,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_006_FR,Est-ce que mon enfant doit recevoir tous les vaccins du carnet,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_007_FR,Contre quoi protège le vaccin Rota,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_008_FR,Le vaccin contre la rougeole évite quelles complications,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_009_FR,Le vaccin peut-il empêcher les épidémies dans mon quartier,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_010_FR,Mon bébé peut-il être malade sans vaccin,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_011_FR,À quoi servent les vaccins pour les bébés,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_012_FR,Pourquoi vacciner contre la rougeole,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_013_FR,Les vaccins aident-ils à protéger aussi les autres enfants,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_014_FR,C'est quoi l'immunité que donne le vaccin,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_015_FR,Le vaccin Penta protège contre quoi exactement,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_016_FR,Pourquoi donne-t-on le vaccin contre la polio en gouttes dans la bouche,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_017_FR,Quel vaccin protège contre le tétanos,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_018_FR,Pourquoi faut-il vacciner mon enfant dès la naissance,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_019_FR,Contre quelles maladies le vaccin protège-t-il mon bébé,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_020_FR,Pourquoi les nouveau-nés reçoivent-ils un vaccin dès la naissance,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_021_FR,Le BCG protège contre quelle maladie,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_022_FR,Le BCG évite quelle forme de tuberculose,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_023_FR,Pourquoi vacciner contre Haemophilus influenzae type b,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_024_FR,Quel est le rôle des vaccins dans la lutte contre les épidémies,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_025_FR,Le vaccin contre la diphtérie protège de quoi,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_026_FR,Le vaccin contre l'hépatite B est-il donné aux enfants,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_027_FR,Quelle est l'importance du vaccin dans la prévention des maladies,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_028_FR,Quelles maladies évite le vaccin contre la poliomyélite,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_029_FR,Est-ce que la vaccination peut faire disparaître une maladie,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_030_FR,Pourquoi le carnet recommande-t-il autant de vaccins,fra,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_031_FR,Les vaccins sont-ils sûrs pour les bébés prématurés,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_032_FR,Le vaccin peut-il brûler la peau de mon enfant,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_033_FR,Quels sont les effets à long terme des vaccins,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_034_FR,Est-ce que recevoir trop de vaccins à la fois c'est dangereux,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_035_FR,Y a-t-il de l'aluminium dans les vaccins,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_036_FR,Y a-t-il des risques à vacciner un enfant enrhumé,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_037_FR,Les vaccins sont-ils fabriqués avec du sang,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_038_FR,Les vaccins donnés au Congo sont-ils de bonne qualité,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_039_FR,Les vaccins peuvent-ils être périmés au centre de santé,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_040_FR,Les vaccins sont-ils testés avant d'être donnés aux enfants,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_041_FR,Est-ce que le vaccin est dangereux pour mon bébé,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_042_FR,Les vaccins peuvent-ils rendre mon enfant malade,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_043_FR,Est-ce que je peux refuser un vaccin si j'ai peur,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_044_FR,Le vaccin contre la rougeole est-il dangereux,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_045_FR,Est-ce que le vaccin est sans danger pour les nourrissons,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_046_FR,Est-ce que le vaccin fait grossir ou maigrir,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_047_FR,Le vaccin Penta est-il sûr,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_048_FR,Les vaccins contiennent-ils des produits toxiques,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_049_FR,Est-ce que le vaccin contient du mercure,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_050_FR,Est-ce que le vaccin peut donner une forte fièvre,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_051_FR,"J'ai peur de faire vacciner mon enfant, est-ce que c'est sûr",fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_052_FR,Les aiguilles utilisées pour vacciner sont-elles propres,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_053_FR,Le vaccin peut-il causer des malformations chez l'enfant,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_054_FR,Est-ce que le vaccin est sûr pour un enfant malnutri,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_055_FR,Est-ce que le vaccin peut donner le sida,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_056_FR,Est-ce que les vaccins contiennent des microbes vivants,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_057_FR,Le vaccin est-il sûr si mon bébé a la diarrhée,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_058_FR,Le vaccin peut-il causer la mort,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_059_FR,Pourquoi certains enfants tombent-ils malades après le vaccin,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_060_FR,Est-ce que les vaccins sont bien conservés au froid,fra,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_061_FR,Quand commence le calendrier vaccinal de l'enfant,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_062_FR,"Mon bébé est né hier, quand faut-il le vacciner",fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_063_FR,Quels vaccins faut-il faire avant l'âge d'un an,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_064_FR,À partir de quel âge un enfant est-il complètement vacciné,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_065_FR,"À dix semaines, quels vaccins faut-il faire",fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_066_FR,Quand revient-on après le BCG,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_067_FR,Le carnet de vaccination indique quelle prochaine date,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_068_FR,Combien de fois mon enfant doit-il être vacciné,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_069_FR,Quels vaccins mon enfant doit-il recevoir avant son premier anniversaire,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_070_FR,Quel vaccin doit-on faire à quatorze semaines,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_071_FR,"Quinze jours plus tard, l'enfant étant guérie la mère demande quelles vaccinations vous recommandez au cours des 6 mois à venir. Quelle est votre réponse",fra,CALENDRIER_RDV,FAQ_003,mediqal_oeq,0.9747929573059082
+Q_072_FR,À quel âge mon bébé doit-il recevoir le premier vaccin,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_073_FR,Quand mon enfant doit-il recevoir le vaccin contre la rougeole,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_074_FR,À quel âge le vaccin de la polio est-il donné,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_075_FR,Combien de doses de Penta faut-il,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_076_FR,À quel âge se fait le vaccin contre la fièvre jaune,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_077_FR,Quelles sont les dates des séances de vaccination,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_078_FR,"À neuf mois, quel vaccin faut-il donner",fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_079_FR,Quel est le calendrier de vaccination des enfants au Congo,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_080_FR,Quand faut-il donner le BCG,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_081_FR,Quand se termine le calendrier vaccinal de l'enfant,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_082_FR,À quel âge donne-t-on le vaccin Penta,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_083_FR,"Mon enfant de cinq mois, quels vaccins lui donner",fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_084_FR,À quel âge le vaccin Rota est-il donné,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_085_FR,Quel âge pour le vaccin antitétanique de l'enfant,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_086_FR,Quand faire le vaccin contre le pneumocoque,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_087_FR,Quand donner la deuxième dose de rougeole,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_088_FR,Quel est le programme élargi de vaccination des enfants,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_089_FR,Quand a lieu le prochain rendez-vous de vaccination,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_090_FR,Quels vaccins à deux mois,fra,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_091_FR,Peut-on rattraper deux vaccins en même temps,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_092_FR,"Mon enfant a raté le vaccin de la fièvre jaune, que faire",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_093_FR,Comment reprendre le calendrier après une interruption,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_094_FR,"Mon enfant a raté sa vaccination à cause de la maladie, que faire",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_095_FR,"Mon enfant de deux ans n'a jamais été vacciné, peut-on commencer",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_096_FR,Que faire si l'enfant a dépassé l'âge du vaccin BCG,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_097_FR,Est-ce grave si l'enfant a deux semaines de retard,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_098_FR,"Le centre était fermé, mon enfant a raté sa séance, que faire",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_099_FR,"Mon enfant a raté le BCG, jusqu'à quel âge peut-on le faire",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_100_FR,Quel est le délai pour rattraper un vaccin manqué,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_101_FR,"Mon enfant a raté un rendez-vous de vaccination, que faire",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_102_FR,Est-ce qu'on peut encore vacciner un enfant en retard,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_103_FR,"Mon enfant a manqué la polio, peut-on la rattraper",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_104_FR,Quel est l'âge limite pour rattraper le vaccin contre la rougeole,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_105_FR,"Mon bébé a raté le Penta 2, que faire",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_106_FR,Faut-il recommencer la vaccination depuis le début,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_107_FR,Que faire si j'ai perdu le carnet de vaccination,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_108_FR,"J'ai oublié le vaccin de neuf mois, est-ce trop tard",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_109_FR,"Mon enfant n'a pas été vacciné à la naissance, que faire",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_110_FR,Quel est le programme de rattrapage recommandé,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_111_FR,Comment rattraper les vaccins en retard,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_112_FR,"Mon enfant de dix-huit mois n'a reçu qu'un seul vaccin, que faire",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_113_FR,"Mon enfant a raté le Rota, peut-on le donner plus tard",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_114_FR,Est-ce que je peux rattraper les vaccins le même mois,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_115_FR,Comment rattraper le vaccin Penta 3,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_116_FR,"J'ai déménagé, comment continuer la vaccination de mon enfant",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_117_FR,Est-ce que le retard annule les vaccins déjà reçus,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_118_FR,"Nous étions en voyage, l'enfant a raté ses vaccins",fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_119_FR,Peut-on rattraper les vaccins à l'école,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_120_FR,Comment rattraper les vaccins si le carnet est incomplet,fra,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_121_FR,Que faire contre la douleur au point d'injection,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_122_FR,Mon enfant a une petite boule sous la peau après le vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_123_FR,Peut-on mettre une compresse sur le point d'injection,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_124_FR,"Mon bébé a des convulsions après le vaccin, que faire",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_125_FR,Est-ce normal que mon bébé refuse de manger après le vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_126_FR,Est-ce normal que l'enfant ait moins d'appétit après le vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_127_FR,Comment calmer les pleurs de mon bébé après le vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_128_FR,Mon enfant a une éruption cutanée après le vaccin contre la rougeole,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_129_FR,"Mon bébé a de la fièvre deux jours après le vaccin, est-ce normal",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_130_FR,"Mon enfant vomit après le vaccin, que faire",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_131_FR,"Mon bébé a de la fièvre après le vaccin, est-ce normal",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_132_FR,"Mon enfant a une boule au point d'injection, est-ce normal",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_133_FR,"Mon enfant est irritable après le vaccin, est-ce normal",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_134_FR,"Après la vaccination, mon enfant a de la fièvre à 38, que faire",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_135_FR,Combien de temps dure la fièvre après le vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_136_FR,"Après le BCG, une plaie apparaît, est-ce normal",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_137_FR,Quel médicament donner contre la fièvre après le vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_138_FR,Le bras de mon enfant est gonflé après le vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_139_FR,"Mon enfant pleure beaucoup après le vaccin, que faire",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_140_FR,"Mon enfant a une forte fièvre le soir du vaccin, que faire",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_141_FR,Que faire si mon bébé a de la fièvre après le vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_142_FR,Le vaccin fait-il mal au bébé,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_143_FR,Combien de jours durent les effets du vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_144_FR,Quand faut-il s'inquiéter des effets du vaccin,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_145_FR,"Mon enfant a la tête chaude après le vaccin, que faire",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_146_FR,Le vaccin Penta donne-t-il de la fièvre,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_147_FR,"Après le vaccin rougeole, la fièvre arrive après combien de jours",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_148_FR,"Mon bébé a la diarrhée après le vaccin Rota, que faire",fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_149_FR,Est-ce que la fièvre après le vaccin est dangereuse,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_150_FR,Peut-on donner du paracétamol avant le vaccin pour éviter la fièvre,fra,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_151_FR,On dit que le vaccin est fait avec du sang de serpent,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_152_FR,On raconte que le vaccin fait grossir le ventre,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_153_FR,Est-ce que le vaccin fait naître des enfants malformés,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_154_FR,Ma famille dit que les vaccins tuent plus qu'ils ne protègent,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_155_FR,On dit que les enfants vaccinés meurent plus tard,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_156_FR,Est-ce vrai que le vaccin contient des organes d'animaux,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_157_FR,On dit que le vaccin provoque des avortements,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_158_FR,Ma voisine dit qu'il ne faut pas vacciner les filles,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_159_FR,"On dit que le vaccin fait mourir les bébés dans leur sommeil, est-ce vrai",fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_160_FR,Le vaccin est-il lié à la sorcellerie,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_161_FR,"On dit que le vaccin rend les enfants stériles, est-ce vrai",fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_162_FR,On raconte que le vaccin donne le cancer,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_163_FR,Le pasteur a dit que le vaccin est la marque du diable,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_164_FR,On dit que le vaccin contient la maladie elle-même pour tuer,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_165_FR,Est-ce vrai que le vaccin est un complot des Blancs,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_166_FR,On raconte que le vaccin stérilise les enfants dans le ventre,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_167_FR,Est-ce vrai que le vaccin fait pousser des cornes aux enfants,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_168_FR,J'ai entendu que le vaccin empoisonne les enfants,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_169_FR,On dit que les vaccins sont faits pour réduire la population,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_170_FR,On dit que le vaccin est réservé aux enfants pauvres,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_171_FR,Ma belle-mère dit que le vaccin attire les mauvais esprits,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_172_FR,Est-ce vrai que le vaccin donne la tuberculose,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_173_FR,"On dit que le vaccin est inutile, que c'est du business",fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_174_FR,Est-ce vrai que le vaccin rend les gens malades pour les tuer,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_175_FR,J'ai entendu que le vaccin donne le paludisme,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_176_FR,Est-ce vrai que les infirmières donnent du poison dans le vaccin,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_177_FR,On raconte que le vaccin empêche les femmes d'accoucher,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_178_FR,"On dit que le vaccin rend la femme stérile, est-ce vrai",fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_179_FR,Est-ce que le vaccin rend les enfants stupides,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_180_FR,Est-ce vrai que les vaccins rendent les enfants obéissants comme des robots,fra,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_181_FR,Quel centre de santé vaccine les enfants dans mon quartier,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_182_FR,Quels sont les jours de vaccination de masse,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_183_FR,Où faire vacciner mon enfant à Talangaï,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_184_FR,Quelle est l'adresse du centre de vaccination de Ouenzé,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_185_FR,Où acheter le carnet de vaccination,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_186_FR,Où se procurer les vaccins du programme élargi,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_187_FR,Est-ce que je peux vacciner mon enfant à la PMI,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_188_FR,Est-ce que la vaccination est payante,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_189_FR,Est-ce que les centres de santé ouvrent le dimanche pour la vaccination,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_190_FR,Est-ce que le vaccin est disponible au dispensaire,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_191_FR,Où puis-je faire vacciner mon enfant,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_192_FR,Où faire le vaccin à Brazzaville,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_193_FR,Faut-il prendre rendez-vous pour la vaccination,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_194_FR,Où se trouve le centre de santé intégré le plus proche,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_195_FR,Est-ce que je peux vacciner mon enfant à Pointe-Noire,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_196_FR,Où faire le BCG à la naissance,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_197_FR,Y a-t-il des séances de vaccination le samedi,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_198_FR,Où se trouve le centre de vaccination le plus proche,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_199_FR,Est-ce que la vaccination est gratuite,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_200_FR,Où faire le rappel de vaccination de mon enfant,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_201_FR,Quels sont les horaires de vaccination au centre de santé,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_202_FR,Y a-t-il une campagne de vaccination en ce moment,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_203_FR,Combien coûte le carnet de vaccination,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_204_FR,Est-ce que la vaccination est accessible aux personnes déplacées,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_205_FR,Le vaccin est-il disponible dans les villages,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_206_FR,La vaccination est-elle gratuite au Congo,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_207_FR,Est-ce que les équipes passent dans les quartiers pour vacciner,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_208_FR,Quels papiers faut-il pour vacciner mon enfant,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_209_FR,Où faire le vaccin contre la rougeole,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_210_FR,Où se procurer un nouveau carnet de vaccination si on l'a perdu,fra,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_211_FR,Mon enfant a une plaie qui s'infecte,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_212_FR,Mon enfant a une toux qui ne s'arrête pas,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_213_FR,"Mon enfant a une crise d'asthme, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_214_FR,Mon bébé a très chaud et transpire beaucoup,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_215_FR,"Mon bébé a les yeux jaunes, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_216_FR,Mon bébé a perdu connaissance après une chute,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_217_FR,Mon enfant a été mordu par un serpent,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_218_FR,"Mon bébé a la peau bleue, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_219_FR,"Mon enfant a de la fièvre et des boutons, que faire en urgence",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_220_FR,Mon enfant vomit du sang,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_221_FR,Décrivez l'examen scanner sans injection demandé en urgence et indiquez le diagnostic (cf image),fra,HORS_DOMAINE_CLINIQUE,FAQ_008,mediqal_oeq,0.7943112850189209
+Q_222_FR,"Mon bébé convulse, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_223_FR,"Mon bébé ne bouge plus, aidez-moi",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_224_FR,"Mon bébé a la malaria, quel traitement",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_225_FR,"Mon enfant a bu de l'eau sale, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_226_FR,Mon enfant est tombé et s'est cassé le bras,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_227_FR,"Mon enfant est inconscient, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_228_FR,Mon enfant a très mal au ventre,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_229_FR,Mon enfant a une forte fièvre et respire mal,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_230_FR,"Mon bébé a la diarrhée depuis trois jours, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_231_FR,Mon bébé ne réagit plus quand je l'appelle,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_232_FR,"Mon enfant saigne beaucoup, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_233_FR,"Mon enfant a la rougeole avec complications, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_234_FR,"Mon enfant a le palu grave, où l'emmener",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_235_FR,"Mon enfant a une fracture, où aller en urgence",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_236_FR,"Mon bébé a la gorge enflée, il n'arrive pas à avaler",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_237_FR,Mon bébé a des boutons partout sur le corps,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_238_FR,"Mon enfant urine du sang, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_239_FR,"Mon bébé a avalé un produit, que faire",fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_240_FR,Mon bébé a de la fièvre et des convulsions,fra,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_001_LN,Mpo na nini kopesa mwana na ngai vaccin ata soki azali komonana nzoto kolɔngɔnɔ,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_002_LN,Mpo na nini vaccin ya kolɔngɔnɔ ya mposo ezali na ntina mpo na bana mike,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_003_LN,Mpo na nini moto akoki kozwa nkisi ya maladi ya kolɔngɔnɔ ya nzoto na sanza libwa?,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_004_LN,Nkisi yango ebatelaka moto na maladi ya makolo,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_005_LN,Mpo na nini ba vaccins ezali na ntina mpo na santé ya mwana na ngai,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_006_LN,Mwana na ngai asengeli kozwa ba vaccine nyonso oyo ezali na buku na ye ya mikanda,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_007_LN,Nkisi ya Rota ebatelaka bato na nini?,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_008_LN,Nkisi ya kolɔngɔnɔ ya nzoto oyo epekisaka makama,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_009_LN,Ba vaccine ekoki kopekisa maladi na quartier na ngai,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_010_LN,Mwana na ngai akoki kobela sans vaccin,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_011_LN,Ndenge nini nkisi ya kokɔtisa bana na maladi esalisaka,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_012_LN,Mpo na nini kokata maladi ya kolɔngɔnɔ ya nzoto,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_013_LN,Ba vaccines esungaka mpe kobatela bana mosusu,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_014_LN,Bokono ya nzoto oyo monganga apesi,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_015_LN,Vaccine Penta ebatelaka mpenza bato na nini?,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_016_LN,Mpo na nini bato bapesaka vaccin ya polio na matangá na monɔkɔ,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_017_LN,Nkisi nini ebatelaka maladi ya tetanus,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_018_LN,Mpo na nini mwana na ngai asengeli kozwa vaccin banda abotama,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_019_LN,Maladi nini vaccin ebatelaka mwana na ngai,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_020_LN,Mpo na nini bana oyo babotami sika bazwaka nkisi ya kokima maladi banda na kobotama,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_021_LN,Maladi nini BCG ebatelaka,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_022_LN,BCG epekisaka lolenge nini ya maladi ya ntolo,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_023_LN,Mpo na nini osengeli kozwa nkisi ya Haemophilus influenzae type b,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_024_LN,Ndenge nini nkisi ya kokata bato ezali kosalisa mpo na kosilisa bamaladi mabe?,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_025_LN,Nkisi ya kokima maladi ya diphtérie ebatelaka bato na makambo nini?,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_026_LN,Bana bakoki kozwa vaccin ya hépatite B?,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_027_LN,Ndenge nini nkisi ya kokima bamaladi ezali na ntina mingi mpo na komibatela na bamaladi,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_028_LN,Maladi nini ekopekisama na nkisi ya poliomielite,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_029_LN,Bokɔnɔ ekoki kosila soki moto apesi ye nkisi?,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_030_LN,Mpo na nini buku ya bokundoli ezali kopesa toli na ntina na ba vaccins ebele,lin,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_031_LN,Ba vaccins ezali ya libateli mpo na bana oyo babotami liboso ya kobotama,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_032_LN,Ba vaccine ekoki kotumba loposo ya mwana na ngai,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_033_LN,Ndenge nini nkisi yango ekoki kosalisa bato na mikolo ezali koya?,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_034_LN,Kozwa ba vaccins mingi na mbala moko ezali likama?,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_035_LN,Ezali na aluminium na ba vaccins?,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_036_LN,Ezali na likama ya kobakisa mwana oyo azali na maladi ya malili ya motó,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_037_LN,Ba vaccins esalemi na makila,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_038_LN,Ba vaccins oyo bapesi na Congo ezali ya malamu,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_039_LN,Ba vaccins ekoki kosila na centre ya santé,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_040_LN,Ba vaccins bazali komeka liboso ya kopesa bana,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_041_LN,Vaccine ezali likama mpo na mwana na ngai,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_042_LN,Ba vaccins ekoki ko kumisa mwana na ngai malade,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_043_LN,Nakoki koboya kozwa vaccin soki nazali kobanga,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_044_LN,Ekisi ya kolɔngɔnɔ ya nsoso ezali na likama?,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_045_LN,Ba vaccine ezali na likama te mpo na bana mike,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_046_LN,Vaccine yango ezali kosala ete moto akóma monene to moke?,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_047_LN,Vaccine Penta ezali na bokengi te,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_048_LN,Ba vaccins ezali na biloko ya pwazɔ,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_049_LN,Vaccine yango ezali na mercure?,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_050_LN,Ba vaccine ekoki kopesa moto fièvre makasi,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_051_LN,"Nazali kobanga kopesa mwana na ngai vaccin, ezali ya solo?",lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_052_LN,Ba signes oyo basalelaka mpo na kopakola yango ezali pɛto,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_053_LN,Ba vaccine ekoki kosala ete mwana aboma,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_054_LN,Ba vaccine ezali ya libateli mpo na bana oyo bazali na bokono ya nzoto te,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_055_LN,Ba vaccine ekoki kopesa sida,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_056_LN,Ba vaccin ezali na ba microbes ya bomoi,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_057_LN,Ba vaccine ezali ya libateli soki mwana na ngai azali na diarrhée,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_058_LN,Ba vaccine ekoki koboma,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_059_LN,Mpo na nini bana mosusu babɛlaka nsima ya kopasola,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_060_LN,Ba vaccins ezali malamu na malili,lin,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_061_LN,Ntango nini programɛ ya kopɛtola bana ekobanda,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_062_LN,"Mwana na ngai abotamaki lobi, tango nini esengeli kobakisa ye",lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_063_LN,Ba vaccins nini esengeli kobakisama liboso ya kobotama na mbula moko,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_064_LN,Bana bakokoma kozwa nkisi ya kokima maladi ya bokono banda na mbula nini,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_065_LN,"Na pɔsɔ zomi, nini esengeli kobakisa",lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_066_LN,Ntango nini tokozonga nsima ya BCG,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_067_LN,Buku ya bokabwani ezali kolakisa mokolo oyo ekoya,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_068_LN,Mwana na ngai asengeli kozwa vaccin mbala boni,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_069_LN,Bana na ngai basengeli kozwa ba vaccine nini liboso ya mokolo ya liboso ya kobotama na bango,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_070_LN,Bokoki kosala vaccin nini na baposo zomi na minei,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_071_LN,"15 jours plus tard, bébé a récupéré maman atuni yo vaccinations nini opesi na boumeli ya sanza 6 oyo ekoya.",lin,CALENDRIER_RDV,FAQ_003,mediqal_oeq,0.9747929573059082
+Q_072_LN,Mwana na ngai asengeli kozwa vaccin ya liboso na mbula boni,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_073_LN,Ntango nini mwana na ngai asengeli kozwa vaccin ya maladi ya kolona,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_074_LN,Bokono ya polio esengeli kopesama na mibu boni,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_075_LN,Ndenge nini osengeli kozwa Penta,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_076_LN,Bokono ya kokata fièvre jaune ezali na mbula boni,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_077_LN,Mikolo nini bokobanda kopɛtolama?,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_078_LN,"Na sanza libwa, nini esengeli kopesa yo",lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_079_LN,Ntango nini bana bazali kozwa nkisi na Congo,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_080_LN,Ntango nini osengeli kopesa BCG,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_081_LN,Ntango oyo mwana asengeli kozwa nkisi ya kokima,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_082_LN,Ozali na mbula boni mpo na kozwa libonza ya Penta,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_083_LN,"Mwana na ngai ya sanza mitano, nkisi nini ya kopakola",lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_084_LN,Bokono nini moto asengeli kozwa vaccin Rota,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_085_LN,Bana bazali na mbula boni mpo na kozwa nkisi ya maladi ya ntolo,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_086_LN,Ntango nini osengeli kozwa nkisi ya pneumocose,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_087_LN,Ntango ya kopesa moselu ya mibale,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_088_LN,Programɛ nini ya monene ya kopɛtola bana,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_089_LN,Ntango nini likita ya bokundi ya sika ekosalema,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_090_LN,Ba vaccins nini na sanza mibale,lin,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_091_LN,Tokoki kozwa ba vaccins mibale na mbala moko,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_092_LN,"Mwana na ngai abungi na vaccin ya fièvre jaune, nini nasala",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_093_LN,Ndenge ya kozongela kalandriye nsima ya kokata yango,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_094_LN,"Mwana na ngai abwakamaki te mpo na maladi, nini nasala",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_095_LN,"Mwana na ngai ya mibu mibale azwi naino te nkisi ya kokima, tokoki kobanda",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_096_LN,Nini okoki kosala soki mwana aleki mibu ya kozwa BCG,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_097_LN,Ezali mabe soki mwana azali na pɔsɔ mibale ya koumela?,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_098_LN,"Centre yango ezalaki ya kokanga, mwana na ngai abosanaki kelasi, nini nasala",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_099_LN,"Mwana na ngai abosanaki BCG, kino na mbula boni okoki kosala yango",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_100_LN,Ntango nini esengeli mpo na kozwa libonza oyo ezangi,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_101_LN,"Mwana na ngai abungi na rendez-vous ya vaccination, nini nasala",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_102_LN,Tokoki lisusu kopesa mwana oyo akufi na ngonga ya malamu,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_103_LN,"Mwana na ngai abungi polio, tokoki kokanga ye",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_104_LN,Mbula nini eleki mpo na kozwa libonza ya maladi ya kolona,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_105_LN,Mwana na ngai abungi Penta 2 nini nasala,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_106_LN,Esengeli kozongisa vaccination banda ebandeli,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_107_LN,Nakosala nini soki nazwi mokanda ya bokabwani te,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_108_LN,"Nabosani vaccin ya sanza libwa, ezali trop tard?",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_109_LN,"Mwana na ngai abotamaki te, nasalaka nini",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_110_LN,Programɛ nini ya kokanga bato oyo bazali na maladi yango esengeli kosala?,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_111_LN,Ndenge ya kokanga bato oyo bazwi nkisi yango nsima ya ngonga,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_112_LN,"Mwana na ngai ya sanza zomi na mwambe azwaki kaka libonza moko, nini nasala",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_113_LN,"Mwana na ngai abungisaki Rota, tokoki kopesa yango na nsima",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_114_LN,Nakoki kozwa ba vaccins na sanza moko,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_115_LN,Ndenge ya kozwa libonza ya Penta 3,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_116_LN,"Nautaki kofanda, ndenge nini nakoki kokoba kopesa mwana na ngai vaccin",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_117_LN,Koumela ezali kofuta ba vaccins oyo bazwi,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_118_LN,"Tozalaki na mobembo, mwana abungisaki ba vaccine na ye",lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_119_LN,Tokoki kozwa ba vaccins na eteyelo,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_120_LN,Ndenge ya kozwa ba vaccins soki mokanda ya bokono ezali ya kokoka te,lin,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_121_LN,Ndenge ya kosilisa mpasi na esika ya kotya yango,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_122_LN,Mwana na ngai azali na mwa boule na nse ya loposo nsima ya kopakola,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_123_LN,Tokoki kotia compression na esika ya injection,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_124_LN,"Mwana na ngai azali na maladi ya konvulsion nsima ya kopasola, nini nasala",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_125_LN,Ezali normal mwana na ngai aboya kolia nsima ya kopakola yango?,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_126_LN,Ezali malamu mwana azala na mposa ya kolya te nsima ya kozwa nkisi?,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_127_LN,Ndenge ya kokitisa mpisoli ya mwana na ngai nsima ya kozwa nkisi,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_128_LN,Mwana na ngai abimi na loposo nsima ya kozwa vaccin ya maladi ya rougeole,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_129_LN,"Mwana na ngai azali na fièvre mikolo mibale nsima ya kopasola ye, ezali normal?",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_130_LN,"Mwana na ngai azali kozongisa nsima ya kopasola, nasala nini",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_131_LN,"Mwana na ngai azali na fièvre na nsima ya kopasola ye, ezali normal?",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_132_LN,"Mwana na ngai azali na boule na esika ya injection, ezali normal?",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_133_LN,"Mwana na ngai azali kosilika nsima ya kopasola, ezali likambo ya malamu?",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_134_LN,"Nsima ya kopakola ye, mwana na ngai azali na fièvre na mibu 38, nini nasala",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_135_LN,Fièvre eumelaka ntango boni nsima ya kopasola,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_136_LN,"Nsima ya BCG, bolɔzi ebimi, ezali malamu?",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_137_LN,Nkisi nini ya kobela fièvre osengeli kopesa nsima ya kopasola,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_138_LN,Loboko ya mwana na ngai ezali kofungwama nsima ya kopakola yango,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_139_LN,"Mwana na ngai alelaka mingi nsima ya kopasola, nini nasala",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_140_LN,"Mwana na ngai azali na fièvre makasi na butu ya bokono, nini nasala",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_141_LN,Nini nakosala soki mwana na ngai azali na fièvre nsima ya kopasola,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_142_LN,Ba vaccine ezali kosala mwana mabe,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_143_LN,Malamu ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya bokɔnɔ ya,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_144_LN,Ntango nini osengeli komitungisa mpo na bokono ya nkisi,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_145_LN,"Mwana na ngai azali na motó ya mɔtɔ nsima ya kopasola, nini nasala",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_146_LN,Vaccine Penta epesaka fièvre,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_147_LN,"Nsima ya kopakola yango, fièvre ebimi nsima ya mikolo boni",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_148_LN,"Mwana na ngai azali na diarrhée nsima ya vaccin Rota, nini nasala",lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_149_LN,Maladi ya fièvre nsima ya kopasola yango ezali likama?,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_150_LN,Tokoki kopesa paracétamol liboso ya kopanza mpo na kokima fièvre,lin,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_151_LN,Balobaka ete nkisi yango esalemi na makila ya nyoka,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_152_LN,Bazalaki koloba ete vaccin yango ezali kobakisa libumu,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_153_LN,Ba vaccin ebotaka bana ya mabe,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_154_LN,Libota na ngai elobi ete ba vaccins ebomaka mingi koleka ebatelaka,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_155_LN,Balobaka ete bana oyo bazwi nkisi bakufaka na nsima,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_156_LN,Ezali solo ete nkisi yango ezali na binama ya nyama?,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_157_LN,Balobaka ete nkisi yango ebotaka zemi,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_158_LN,Moninga na ngai ya mboka alobi ete esengeli te kopesa bana basi nkisi,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_159_LN,"Bazalaki koloba ete vaccin ebomaka bana na mpɔngi, ezali solo?",lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_160_LN,Ba vaccine ezali na boyokani na bosantu?,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_161_LN,"Bazalaki koloba ete vaccin esalaka bana bazala na bana te, ezali solo?",lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_162_LN,Bazalaki koloba ete vaccin yango epesaka cancer,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_163_LN,Pasteur alobaki vaccin ezali elembo ya diable,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_164_LN,Balobaka ete vaccin yango ezali na maladi yango moko mpo na koboma,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_165_LN,Ezali solo ete vaccin ezali complot ya ba Blancs,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_166_LN,Bazalaki koloba ete vaccin yango ezalaki kosala ete bana oyo bazali na libumu ya mama bábota te,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_167_LN,Ezali solo ete vaccin ekoli maseke na bana,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_168_LN,Nayokaki ete vaccin yango ezali na poison na bana,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_169_LN,Balobaka ete ba vaccins esalemi mpo na kokitisa bato,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_170_LN,Balobaka ete vaccin ezali bobele mpo na bana babola,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_171_LN,Bokilo na ngai alobi ete vaccin ebendaka milimo mabe,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_172_LN,Ezali solo ete vaccin epesaka tuberculose,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_173_LN,"Bazalaki koloba ete vaccin ezali na ntina te, ezali mosala",lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_174_LN,Ezali solo ete vaccin esalaka ete bato bábɛla mpo na koboma bango,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_175_LN,Nayokaki ete vaccin epesaka malaria,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_176_LN,Ezali solo ete ba infirmières bapesaka poison na vaccin,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_177_LN,Bazalaki koloba ete nkisi yango epekisaka basi kobota,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_178_LN,"Bazalaki koloba ete vaccin esalaka mwasi kobota te, ezali solo?",lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_179_LN,Ba vaccines ezali kosala bana bazoba,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_180_LN,Ezali solo ete ba vaccins esalaka bana batosa lokola ba robots,lin,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_181_LN,Esika nini ya bokolongono ya bana na quartier na ngai,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_182_LN,Mikolo nini ya kopakola bato mingi,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_183_LN,Esika nakoki kopesa mwana na ngai nkisi na Talangaï,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_184_LN,Adrɛsi ya esika ya kozipa nkisi ya Ouenzé ezali nini?,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_185_LN,Esika wapi okoki kosomba mokanda ya bokono,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_186_LN,Esika oyo okoki kozwa nkisi ya programɛ oyo epesami,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_187_LN,Nakoki kobakisa mwana na ngai na PMI?,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_188_LN,Ba vaccinations ezali kofuta mbongo,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_189_LN,Ba centre ya bokolongono efungwami na mikolo ya lomingo mpo na kopanza,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_190_LN,Ba vaccine ezali na place ya bokengi,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_191_LN,Nakoki kopesa mwana na ngai vaccin wapi,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_192_LN,Esika ya kozwa nkisi ya kokata na Brazzaville,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_193_LN,Esengeli kobenga moto mpo na kozwa libonza,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_194_LN,Esika oyo ezali pene na esika ya bokolɔngɔnɔ ya nzoto,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_195_LN,Nakoki ko vacciner mwana na ngai na Pointe-Noire,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_196_LN,Esika ya kosala BCG na kobotama,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_197_LN,Ezali na bokutani ya bokabwani na mokolo ya samedi?,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_198_LN,Esika ya pene ya esika ya kopɛtola,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_199_LN,Ba vaccinations ezali ofele,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_200_LN,Esika ya kozongisa mwana na ngai na bokɔnɔ,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_201_LN,Ntango nini esengeli kozipa na lopitalo,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_202_LN,Ezali na kampanye ya kopanza bato na tango oyo?,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_203_LN,Buku ya bokono ezali kofuta ntalo boni,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_204_LN,Bato oyo bakimá mboka bazali kozwa nkisi yango?,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_205_LN,Nkisi ezali na bamboka,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_206_LN,Ba vaccinations ezali ofele na Congo,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_207_LN,Bandeko bakendeke na quartier mpo na kopakola,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_208_LN,Ba papiers nini esengeli mpo na ko vacciner mwana na ngai,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_209_LN,Esika ya kozwa nkisi ya maladi ya kolɔngɔnɔ ya nzoto,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_210_LN,Esika wapi okoki kozwa mokanda ya sika ya bokabwani soki obungisi yango,lin,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_211_LN,Mwana na ngai azali na maladi oyo ezali kozwa bato mosusu,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_212_LN,Mwana na ngai azali kosanza makasi,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_213_LN,"Mwana na ngai azali na maladi ya asma, nasalaka nini",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_214_LN,Mwana na ngai azali na molunge makasi mpe atindi mpema mingi,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_215_LN,"Mwana na ngai azali na miso ya pembe, nasala nini",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_216_LN,Mwana na ngai abwakamaki na nse na nse,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_217_LN,Mwana na ngai anyokwamaki na nyoka,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_218_LN,"Mwana na ngai azali na mposo ya bule, nasala nini",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_219_LN,"Mwana na ngai azali na fièvre mpe na mabɛlɛ, nini nasala na lombangu",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_220_LN,Mwana na ngai azali kozongisa makila,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_221_LN,Lobelá lisano ya nokinoki oyo esɛngi te mpe lobelá maladi oyo ebimi (tala elilingi),lin,HORS_DOMAINE_CLINIQUE,FAQ_008,mediqal_oeq,0.7943112850189209
+Q_222_LN,"Mwana na ngai azali kobɛla maladi ya bɔɔngɔ, nasalaka nini?",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_223_LN,"Mwana na ngai azali lisusu kotambola te, salisa ngai",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_224_LN,"Mwana na ngai azali na malaria, ndenge nini bakoki kosalisa ye",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_225_LN,"Mwana na ngai amelaki mai ya mbindo, nasala nini",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_226_LN,Mwana na ngai akweaki mpe abukaki lobɔkɔ na ye,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_227_LN,"Mwana na ngai azali koyeba te, nasala nini",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_228_LN,Mwana na ngai azali na mpasi mingi na libumu,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_229_LN,Mwana na ngai azali na fièvre makasi mpe azali kopema malamu te,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_230_LN,"Mwana na ngai azali na diarrhée mikolo misato, nini nasala",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_231_LN,Mwana na ngai ayokaka lisusu te ntango nabengi ye,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_232_LN,"Mwana na ngai azali kotanga makila mingi, nasalaka nini",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_233_LN,Mwana na ngai azali na maladi ya kolɔngɔnɔ ya nzoto mpe mikakatano mosusu,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_234_LN,"Mwana na ngai azali na maladi ya makasi, epai wapi nakoki komema ye",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_235_LN,"Mwana na ngai abukani, epai wapi nakoki kokende na lombangu",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_236_LN,"Mwana na ngai azali na nkingo oyo etondi, akoki kolia te",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_237_LN,Mwana na ngai azali na maboke na nzoto mobimba,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_238_LN,"Mwana na ngai azali kosopa makila, nasalaka nini",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_239_LN,"Mwana na ngai amɛli eloko moko, nasala nini",lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_240_LN,Mwana na ngai azali na fièvre mpe na konvalescence,lin,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_001_KT,Sambu na Nki Kupesa Mwana na Mono Vaccine Ata Yandi Ke Monana Mbote?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_002_KT,Sambu na nki lusansu ya maladi ya ntu kele mfunu sambu na bana,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_003_KT,Sambu na Nki Beto Ke Nwanaka ti Makulu ya Kufwa Masasi na Bilumbu 9?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_004_KT,Keti vaksine ketaninaka bantu na maladi ya kubela nitu,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_005_KT,Sambu na nki kubaka vaksine kele mfunu sambu na mavimpi ya mwana na mono,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_006_KT,Keti mwana na mono fwete baka bakisi yonso yina kele na mukanda na yandi ya lusansu?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_007_KT,Inki bima Rota ketaninaka beto na yo?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_008_KT,Nkisi ya Kunwanina Makulu Kebuyaka Inki Mambu?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_009_KT,Keti vaksine lenda tanina maladi ya maladi na babwala na mono?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_010_KT,Keti mwana na mono lenda bela kukonda kubaka vaksine?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_011_KT,Inki Mutindu Bana Ke Bakaka Nkisi?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_012_KT,Sambu na Nki Beto Fwete Nwana ti Munganga?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_013_KT,Keti bankisi ya kubelula ke taninaka bana ya nkaka?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_014_KT,Inki mutindu vaksine ke taninaka bantu na kunwana ti maladi?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_015_KT,Inki Nkisi ya Penta Ke Taninaka,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_016_KT,Sambu na nki bo ke pesaka bo vaksine ya polio na munoko na bo,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_017_KT,Inki Nkisi Ke Taninaka Bantu na Kubika nde Bima ya Ngolo Kukonda Kubika,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_018_KT,Sambu na nki beto fwete tanina mwana na beto na lubutuku,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_019_KT,Inki Maladi Vaksin Ke Taninaka Mwana na Mono?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_020_KT,Sambu na nki bana ya mpa ke bakaka vaksine banda na lubutuku,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_021_KT,Inki maladi BCG ketaninaka beto?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_022_KT,BCG Ke Pesaka Ve Bantu Maladi ya Nitu,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_023_KT,Sambu na nki nge fwete baka vaksine sambu na Haemophilus influenzae type b?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_024_KT,Inki kele mukumba ya bamvita ya kenwanisa bamaladi ya ngolo?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_025_KT,Inki Mambu Vaccine ya Diphthérie Ke Taninaka,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_026_KT,Keti bo ke pesaka bana vaksine ya Hepatite B?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_027_KT,Inki kele mfunu ya vaksine sambu na kutanina mavimpi?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_028_KT,Inki Maladi Vaksin ya Polio Kebuyaka,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_029_KT,Keti lusansu lenda manisa maladi?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_030_KT,Sambu na nki mukanda ya Bambangi ya Yehowa ke siamisaka bantu na kubaka vaksine mingi?,mkw,UTILITE_VACCIN,FAQ_001,seed_curated,1.0
+Q_031_KT,Keti bankisi ya kubelula kele mbote sambu na bana yina me butuka ntete ve,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_032_KT,Keti vaksine lenda yoka mpusu ya mwana na mono?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_033_KT,Inki kele bupusi ya nda ya bima yina bo ke sadilaka sambu na kubelula bantu?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_034_KT,Keti kubaka bakamio mingi na mbala mosi kele kigonsa?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_035_KT,Keti bo ke tulaka aluminium na vaccine?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_036_KT,Keti yo kele kigonsa na kubaka lusansu ya mwana yina kele ti maladi ya ntu,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_037_KT,Keti bo ke salaka bamvita ti menga?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_038_KT,Keti bima yina bo ke pesaka bantu ya Congo kele ya mbote?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_039_KT,Keti bo lenda manisa kusadila bakini na nzo-nkanda ya lusansu?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_040_KT,Keti bo ke salaka bansosa ya bima yina ke katulaka bantu maladi na ntwala ya kupesa yo na bana?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_041_KT,Keti vaksine kele kigonsa sambu na bebe na mono?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_042_KT,Keti bankisi lenda kumisa mwana na mono maladi?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_043_KT,Keti mu lenda buya kubaka vaksine kana mu kele na boma?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_044_KT,Keti vaksine ya maladi ya ntu kele kigonsa?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_045_KT,Keti lusansu kele mbote sambu na bana ya fyoti?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_046_KT,Keti vaksine ke kumisaka muntu nene to ya fioti?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_047_KT,Keti vaksine ya Penta kele ya mbote?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_048_KT,Keti bima ya kebebisaka nitu kele na kati ya bima yina kebebisaka nitu,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_049_KT,Keti vaccine yango kele ti mercure?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_050_KT,Keti vaksine lenda nata tiya ya ngolo,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_051_KT,"Mono ke waka boma nde mono ta fwa mwana na mono, keti yo kele kieleka?",mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_052_KT,Keti bansinga yina bo ke sadilaka sambu na kubaka vaksine kele bunkete?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_053_KT,Keti vaksine lenda sala nde mwana kubela?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_054_KT,Keti lusansu kele mbote sambu na mwana yina kele na nzala ya ngolo ya nitu?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_055_KT,Keti vaksine lenda pesa SIDA?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_056_KT,Keti bakini ya kebebisaka nitu kele ti mikrobe ya kezingaka?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_057_KT,Keti lusansu kele mbote kana mwana na mono ke niokwama na dikulu?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_058_KT,Keti Kansansa Lenda Nata Lufwa?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_059_KT,Sambu na nki bana ya nkaka ke belaka na nima ya kubaka vaksine,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_060_KT,Keti bo ke taninaka bima ya ke lwatisaka bantu na madidi?,mkw,SECURITE_VACCIN,FAQ_002,seed_curated,1.0
+Q_061_KT,Ntangu mwana ke bakaka bangonda ya kubaka vaksine,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_062_KT,"Mwana na mono butukaka na mpimpa, nki ntangu beto fwete bela yandi?",mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_063_KT,Inki bima ya kuvutula bansusu nge fwete sala na ntwala ya kulungisa mvula mosi?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_064_KT,Bana ke bakaka vaksine ya mvimba banda na nki bamvula?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_065_KT,"Na bamposo kumi, nki bima ya kuvutula bansusu beto fwete sala?",mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_066_KT,Inki ntangu beto ta vutuka na nima ya BCG?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_067_KT,Mukanda ya lusansu ke monisa dati yina bo ta sala lusansu na nima,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_068_KT,Mwana na mono fwete baka vaksine mbala ikwa?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_069_KT,Inki lusansu mwana na mono fwete baka na ntwala ya kilumbu na yandi ya ntete ya kubutuka,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_070_KT,Inki nkisi beto fwete sala na bamposo kumi na iya?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_071_KT,"Na nima ya bilumbu 15, mwana me beluka mpi mama me yula yandi nki lusansu nge ta pesa yandi na bangonda sambanu yina ke kwisa.",mkw,CALENDRIER_RDV,FAQ_003,mediqal_oeq,0.9747929573059082
+Q_072_KT,Mwana na mono fwete baka vaksine ya ntete na bamvula ikwa?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_073_KT,Inki Ntangu Mwana na Mono Fwete Baka Vaksine ya Mabulu,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_074_KT,Bo ke pesaka vaksine ya polio na bamvula ikwa?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_075_KT,Inki kiteso ya Penta nge fwete nwa?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_076_KT,Bantu ya bamvula ikwa fwete baka vaksine sambu na maladi ya konyo,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_077_KT,Inki kele bangonda ya bangidika ya lusansu ya lusansu,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_078_KT,"Na bangonda uvwa, nki nkisi nge fwete sala?",mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_079_KT,Inki kele manaka ya kupesa bana vaksine na Congo?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_080_KT,Inki Ntangu Nge Fwete Pesa BCG?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_081_KT,Ntangu manaka ya lusansu ya bana ya me baka vaksine me suka,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_082_KT,Nge fwete baka vaksine ya Penta na bamvula ikwa?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_083_KT,"Mwana na mono ya bangonda tanu, nki bima ya kuvutula kansere yandi fwete baka",mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_084_KT,Bo fwete pesa muntu vaksine ya Rota na bamvula ikwa?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_085_KT,Inki mvula mwana fwete baka vaksine ya kunwanisa tiya,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_086_KT,Ntangu ya Kupesa Kansansa ya Pneumocose,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_087_KT,Ntangu ya Kupesa Dosi ya Zole ya Basusi ya Makulu,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_088_KT,Inki kele manaka ya nene ya kubelula bana?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_089_KT,Inki ntangu lukutakanu ya nkaka ya kubaka vaksine ta salama?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_090_KT,Inki Vaccine Nge Lenda Baka na Bilumbu Zole?,mkw,CALENDRIER_RDV,FAQ_003,seed_curated,1.0
+Q_091_KT,Keti beto lenda baka bima zole ya ke katulaka bantu na ntangu mosi?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_092_KT,"Mwana na mono me vidisaka vaksine ya maladi ya ntu-ngolo, nki mono fwete sala?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_093_KT,Mutindu ya Kuvanda ti Kalandrie ya Mbote na Nima ya Kukanga-Ntima,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_094_KT,"Mwana na mono me vidisaka lusansu sambu na maladi yina, nki mono fwete sala?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_095_KT,"Mwana na mono ya bamvula zole me bakaka ntete ve vaksine, keti beto lenda yantika?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_096_KT,Inki nge lenda sala kana mwana me kuma mbuta kuluta mvula ya kubaka vaksine ya BCG,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_097_KT,Keti yo kele mbi kana mwana me sukinina na kukwisa na nzo na yandi na nima ya bamposo zole?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_098_KT,"Nzo-nkanda vandaka ya kukanga, mwana na mono vidisaka manaka na yandi, nki mono fwete sala",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_099_KT,"Mwana na mono me vidisaka BCG, tii nki mvula beto lenda sala yo?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_100_KT,Inki ntangu bo fwete sala sambu na kubaka diaka vaksine yina bo me vidisa?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_101_KT,"Mwana na mono me vidisaka manaka ya kubaka vaksine, nki mono fwete sala",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_102_KT,Keti beto lenda tanina diaka mwana yina me kuma na nima ya kubaka vaksine?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_103_KT,"Mwana na mono me vidisaka maladi ya polio, keti beto lenda baka yandi diaka?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_104_KT,Inki kele mvula ya kuluta mbote sambu na kubaka vaksine ya maladi ya ntu,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_105_KT,"Mwana na mono me vidisa Penta 2, nki mono fwete sala?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_106_KT,Keti beto fwete yantika diaka kubaka vaksine na luyantiku?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_107_KT,Inki Mono Lenda Sala Kana Mono Vilaka Mukanda ya Kimpusu?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_108_KT,"Mono vilaka nkisi yina bo pesaka mono bangonda uvwa, keti yo me suka dezia?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_109_KT,"Mwana na mono butukaka ve ti kansere, nki mono fwete sala?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_110_KT,Inki kele manaka ya bo ke lombaka sambu na kubaka bima yina bo ke zolaka?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_111_KT,Mutindu ya Kubakisa nde Bo Me Yambula na Kubakisa Nkisi,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_112_KT,"Mwana na mono ya bangonda 18 bakaka kaka vaksine mosi, nki mono fwete sala?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_113_KT,"Mwana na mono me vidisa Rota, keti beto lenda pesa yo na nima?",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_114_KT,Keti mu lenda baka bima yina ya mono fwete futa na ngonda mosi?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_115_KT,Mutindu ya Kubakisa Nkisi ya Penta 3,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_116_KT,"Mono me kwendaka na kisika ya nkaka, mpi mono ke landa kupesa mwana na mono vaksine",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_117_KT,Keti kukulumuka ke katulaka bantu yina me bakaka dezia vaksine?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_118_KT,"Beto vandaka na nzyetelo, mwana yina vidisaka bima na yandi ya kuvutula menga",mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_119_KT,Keti beto lenda baka bakisi na nzo-nkanda?,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_120_KT,Mutindu ya kubaka bima yina bo ke pesaka nge na ntwala ya kubaka yo kana mukanda kele ve ya mvimba,mkw,RETARD_RATTRAPAGE,FAQ_004,seed_curated,1.0
+Q_121_KT,Inki Nge Lenda Sala Sambu na Kufwa Mpasi na Kisika ya Ndonga,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_122_KT,Mwana na mono me bela na nsi ya nitu na nima ya kubaka vaksine,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_123_KT,Keti beto lenda tula kampreso na kisika ya bo ke losilaka beto inieksi?,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_124_KT,"Mwana na mono ke niokwama na mabanza na nima ya kubaka vaksine, nki mono fwete sala",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_125_KT,Keti yo kele mbote nde mwana na mono kubuya kudia na nima ya kubaka vaksine?,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_126_KT,Keti yo kele mbote nde mwana kuvanda ti nzala ya kudia mingi ve na nima ya kubaka vaksine?,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_127_KT,Mutindu ya Kuditisa Mawa ya Mwana na Mono na Nima ya Kunwa Vaksine,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_128_KT,Mwana na mono me basika na mpusu ya nitu na nima ya kubaka vaksine ya maladi ya ntu,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_129_KT,"Mwana na mono ke niokwama ti tiya bilumbu zole na nima ya kubaka vaksine, keti yo kele mbote?",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_130_KT,"Mwana na mono ke vwenza na nima ya kubaka vaksine, nki mono fwete sala",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_131_KT,"Mwana na mono ke niokwama ti tiya na nima ya kubaka vaksine, keti yo kele mbote?",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_132_KT,"Mwana na mono kele ti boule na kisika ya bo ke tulaka yandi ndonga, keti yo kele mbote?",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_133_KT,"Mwana na mono ke waka makasi mingi na nima ya kubaka vaksine, keti yo kele mbi ve?",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_134_KT,"Ntangu mono bakaka vaksine, mwana na mono kumaka ti maba na bamvula 38, nki mono fwete sala?",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_135_KT,Maladi ya ngolo ke manaka ve na nima ya kubaka vaksine,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_136_KT,"Na nima ya kusala BCG, kifu ke monanaka, keti yo kele mbote?",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_137_KT,Inki nkisi nge fwete pesa sambu na maladi ya tiya na nima ya kubaka vaksine,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_138_KT,Mwana na mono me kuma kutombuka na diboko na nima ya kubaka vaksine,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_139_KT,"Mwana na mono ke dila mingi na nima ya kubaka vaksine, nki mono fwete sala",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_140_KT,"Mwana na mono ke bela ti tiya mingi na nkokila ya lusansu, nki mono fwete sala",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_141_KT,Inki mono lenda sala kana mwana na mono me kuma ti maba na nima ya kubaka vaksine?,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_142_KT,Keti vaksine lenda sala mwana mpasi?,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_143_KT,Inki ntangu lusansu ke salaka?,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_144_KT,Inki Ntangu Beto Fwete Kudiyangisa Sambu na Mambote ya Vaksin,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_145_KT,"Mwana na mono ke waka makasi na nima ya kubaka vaksine, nki mono fwete sala?",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_146_KT,Keti vaksine ya Penta ke pesaka bantu maladi ya tiya?,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_147_KT,"Na nima ya kubaka vaksine ya maladi ya ntu, mwa bilumbu na nima ya kubaka yo, maladi yango ke basikaka",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_148_KT,"Mwana na mono ke niokwama na dikulu na nima ya kubaka vaksine ya Rota, nki mono fwete sala",mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_149_KT,Keti maladi ya tiya yina ke basikaka na nima ya kubaka vaksine kele kigonsa?,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_150_KT,Keti beto lenda pesa paracetamol na ntwala ya kubaka vaksine sambu na kubuya tiya,mkw,EFFET_SECONDAIRE,FAQ_005,seed_curated,1.0
+Q_151_KT,Bo ke tubaka nde bo me sala vaksine yai ti menga ya nioka,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_152_KT,"Bantu ke tubaka nde, vaksine ke kumisaka divumu nene",mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_153_KT,Keti vaksine kebutaka bana ya kukonda kukuka?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_154_KT,Dibuta na mono ke tubaka nde bima ya ke lwadisaka bantu ke fwaka mingi kuluta bima yina ke taninaka,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_155_KT,Bo ke tubaka nde bana yina bo me bakaka vaksine ke fwaka na nima,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_156_KT,Keti yo kele ya kyeleka nde nkisi yai ya kenyokulaka bantu kevandaka ti binama ya bambisi?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_157_KT,Bo ke tubaka nde vaksine ke basisaka divumu,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_158_KT,"Mfumu, beto ke zola ve nde bo fwa beto.",mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_159_KT,"Bo ke tubaka nde, vaccine ke fwaka bana na mpongi, mpidina ve?",mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_160_KT,Keti Lukanu ya Kukatula Vaksine Kewakana ti Bupusi?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_161_KT,"Bo ke tubaka nde vaksine ke salaka nde bana kuvanda ve ti bana, mpidina ve?",mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_162_KT,Bantu ke tubaka nde vaksine ke pesaka kansere,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_163_KT,Pastere tubaka nde vaksine kele kidimbu ya Satana,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_164_KT,Bo ke tubaka nde vaksine ke vandaka ti maladi yina ke fwaka,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_165_KT,"Keti yo kele ya kieleka nde, bantu ya mindele salaka komplo sambu na kunwanisa beto?",mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_166_KT,Bantu ke tubaka nde vaksine ke fwaka bana na divumu,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_167_KT,Keti yo kele ya kyeleka nde vaksine kebutaka bibongo na bana?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_168_KT,Mono waka nde vaksine ke bebisaka bana,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_169_KT,Bo ke tubaka nde bo ke salaka vaksine sambu na kuvidisa ntalu ya bantu,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_170_KT,Bo ke tubaka nde bana yina kele bansukami mpamba ta baka vaksine yai,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_171_KT,Mama-bokilo na mono ke tuba nde vaksine ke bendaka bampeve ya mbi,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_172_KT,Keti yo kele kyeleka nde vaksine kenataka maladi ya nsambukila?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_173_KT,"Bo ke tubaka nde vaksine kele mfunu ve, yo kele kisalu ya kinsuni",mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_174_KT,Keti yo kele ya kieleka nde vaksine ke salaka nde bantu kukuma ti maladi sambu na kufwa bo?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_175_KT,Mono waka nde vaksine ke pesaka malaria,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_176_KT,Keti yo kele ya kyeleka nde bankengi kepesaka poison na vaccine?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_177_KT,"Bantu ke tubaka nde, vaksine ke kangaka bankento nzila ya kubuta",mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_178_KT,"Bo ke tubaka nde, vaksine ke salaka nde nkento kuvanda ve ti divumu, mpidina ve?",mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_179_KT,Keti vaksine ke salaka nde bana kukuma bazoba?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_180_KT,Keti yo kele ya kyeleka nde bima ya kenyokulaka bana kesalaka nde bana kulemfukila Nzambi bonso bamasini ya kezingaka na ntoto?,mkw,RUMEUR_CROYANCE,FAQ_006,seed_curated,1.0
+Q_181_KT,Inki kisika ya lusansu ke pesaka bana vaksine na kisika yina mono ke zingaka,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_182_KT,Inki kele bilumbu ya lusansu ya nene,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_183_KT,Na kisika ya kupesa mwana na mono vaksine na Talangaï,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_184_KT,Inki kele adresi ya lupitalu ya bo ke bakaka bansangu ya Ouzène?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_185_KT,Na wapi nge lenda sumba mukanda ya lusansu,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_186_KT,Na wapi nge lenda zwa bakisi ya programe ya nene,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_187_KT,Keti mono lenda tanina mwana na mono na kimbefo ya PMI?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_188_KT,Keti lusansu kele mfunu?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_189_KT,Keti banzo ya lusansu ke kangukaka na Lumingu sambu na kubaka lusansu?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_190_KT,Keti bo lenda pesa nge vaksine na kisika ya bo ke sadilaka yo?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_191_KT,Na wapi mono lenda kumisa mwana na mono vaksine,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_192_KT,Wapi Nge Lenda Baka Kansansa na Brazzaville,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_193_KT,Keti nge fwete baka dati sambu na kubaka vaksine?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_194_KT,Kisika ya lusansu ya kele pene-pene,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_195_KT,Keti mu lenda bela mwana na mono na Pointe-Noire?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_196_KT,Wapi Nge Lenda Sala BCG na Lubutuku,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_197_KT,Keti bo ke salaka nkinsi ya lusansu na Lumingu?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_198_KT,Kisika ya kuluta pene-pene ya kisika ya bo ke pesaka bantu bansangu,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_199_KT,Keti lusansu kele ya ofele?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_200_KT,Na wapi mono lenda yibusa mwana na mono na kubaka vaksine,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_201_KT,Inki kele bangunga ya bo fwete sala na nzo-nkanda ya lusansu?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_202_KT,Keti beto ke na kampanye ya kubaka vaksine bubu yai?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_203_KT,Mbongo ya mukanda ya lusansu,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_204_KT,Keti bantu yina me katuka na bansi ya nkaka lenda baka vaksine?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_205_KT,Keti bo lenda pesa beto vaksine na babwala,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_206_KT,Keti Kimpumbulu Kele ya Kufuta Ve na Congo?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_207_KT,Keti bampangi ke kwendaka na babwala sambu na kubaka vaksine?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_208_KT,Inki mikanda mono fwete baka sambu na kubelula mwana na mono?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_209_KT,Wapi Nge Lenda Baka Vaccine ya Maladi ya Mabulu,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_210_KT,Na wapi nge lenda zwa mukanda ya mpa ya lusansu kana nge mevidisa yo?,mkw,LOCALISATION_ACCES,FAQ_007,seed_curated,1.0
+Q_211_KT,Mwana na mono kele ti kifu mosi ya ke bebisa nitu,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_212_KT,Mwana na Mono Ke Nwaka Kisusu Yina Ke Yambulaka Ve,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_213_KT,"Mwana na mono ke bela maladi ya asma, nki mono lenda sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_214_KT,Mwana na mono ke na tiya mingi mpi ke niokwama ngolo,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_215_KT,"Mwana na mono kele ti meso ya ndombe, nki mono fwete sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_216_KT,Mwana na Mono Vandaka Kuvila Makuki na nima ya kubwa,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_217_KT,Nioka Mosi Dinaka Mwana na Mono,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_218_KT,"Mwana na Mono Kele ti Mpusu ya Mbwaki, Inki Mono Lenda Sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_219_KT,"Mwana na mono kele ti maba mpi basusi, nki mono fwete sala na ntangu ya mpasi?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_220_KT,Mwana na Mono Ke Vandaka Kufwa Menga,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_221_KT,Tendula ekzame ya kukonda injection yina nge ke lombaka na ntangu ya mpasi mpi monisa mutindu nge me zaba yo (Tala kifwanisu),mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,mediqal_oeq,0.7943112850189209
+Q_222_KT,"Mwana na Mono Ke Niokwama na Mabanza, Inki Mono Lenda Sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_223_KT,"Mwana na mono ke tambula ve, sadisa mono",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_224_KT,"Mwana na mono kele ti malaria, nki mutindu bo lenda sadisa yandi?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_225_KT,"Mwana na Mono Me Nwa Masa ya Mbi, Inki Mono Lenda Sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_226_KT,Mwana na mono bwaka mpi bukaka diboko,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_227_KT,"Mwana na Mono Me Fwa, Inki Mono Lenda Sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_228_KT,Mwana na mono ke niokwama mingi na divumu,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_229_KT,Mwana na mono kele ti maba mpi ke pema ve mbote,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_230_KT,"Mwana na mono me belaka na basusi bilumbu tatu me luta, nki mono fwete sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_231_KT,Mwana na mono ke waka ve boma ntangu mono ke bingaka yandi,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_232_KT,"Mwana na Mono Ke Pela Mingi, Inki Mono Lenda Sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_233_KT,"Mwana na mono kele ti maladi ya ntu ti mambu ya nkaka ya mpasi, nki mono fwete sala",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_234_KT,"Mwana na mono kele ti maladi ya ngolo, kisika ya kunata yandi",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_235_KT,"Mwana na mono me niokwama na diboko, mpi yandi lenda kwenda na kisika ya nkaka na ntangu ya mpasi",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_236_KT,"Mwana na mono kele ti nkingu ya kutombuka, yandi lenda dia ve",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_237_KT,Mwana na mono kele ti bamputa na nitu na yandi ya mvimba,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_238_KT,"Mwana na Mono Ke Pesaka Menga, Inki Mono Lenda Sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_239_KT,"Mwana na Mono Me Kuma Kudila Kima Mosi, Inki Mono Lenda Sala?",mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
+Q_240_KT,Mwana na mono ke na maba mpi ke niokwama na mabanza,mkw,HORS_DOMAINE_CLINIQUE,FAQ_008,seed_curated,1.0
