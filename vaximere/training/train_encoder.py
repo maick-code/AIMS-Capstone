@@ -98,6 +98,7 @@ def train(
     lr: float = 5e-5,
     seed: int = 42,
     keep_all: bool = False,
+    freeze_backbone: bool = False,
 ) -> dict:
     from transformers import (
         AutoModelForSequenceClassification,
@@ -117,6 +118,16 @@ def train(
     model = AutoModelForSequenceClassification.from_pretrained(
         model_name, num_labels=len(id2label), id2label=id2label, label2id=label2id
     )
+
+    # Option "feature extraction" : gèle tout sauf la tête de classification.
+    # Sur un petit jeu (~500 exemples), fine-tuner le backbone entier (394 M)
+    # surapprend ; n'entraîner que la tête généralise souvent mieux.
+    if freeze_backbone:
+        for name, param in model.named_parameters():
+            if not name.startswith("classifier"):
+                param.requires_grad = False
+        n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        print(f"[train] Backbone gelé — paramètres entraînables : {n_trainable:,}")
 
     # 3) tokenisation
     def _encode(examples):
@@ -295,6 +306,8 @@ def main(argv=None) -> None:
     p.add_argument("--lr", type=float, default=5e-5)
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--keep-all", action="store_true")
+    p.add_argument("--freeze-backbone", action="store_true",
+                   help="n'entraîner que la tête de classification (feature extraction)")
     p.add_argument("--push-to-hub", action="store_true")
     p.add_argument("--push-only", action="store_true",
                    help="pousse le modèle déjà entraîné (--out/model) sans ré-entraîner")
@@ -324,6 +337,7 @@ def main(argv=None) -> None:
         lr=args.lr,
         seed=args.seed,
         keep_all=args.keep_all,
+        freeze_backbone=args.freeze_backbone,
     )
     if args.push_to_hub:
         push_to_hub(out_dir / "model", hub_id, args.model_name, metrics)
