@@ -94,8 +94,8 @@ def train(
     model_name: str = "cis-lmu/glot500-base",
     max_length: int = 128,
     batch_size: int = 32,
-    epochs: int = 6,
-    lr: float = 3e-5,
+    epochs: int = 8,
+    lr: float = 5e-5,
     seed: int = 42,
     keep_all: bool = False,
 ) -> dict:
@@ -131,16 +131,17 @@ def train(
     args = safe_init(
         TrainingArguments,
         output_dir=str(out_dir / "checkpoints"),
-        eval_strategy="epoch",  # nom actuel (remplace evaluation_strategy, supprimé)
-        save_strategy="epoch",
-        load_best_model_at_end=True,
-        metric_for_best_model="f1_macro",
+        eval_strategy="epoch",
+        save_strategy="no",   # pas de sauvegarde par époque (le "Writing model shards"
+        # de ~15 s disparaît) : on sauvegarde le modèle final nous-mêmes à la fin.
         per_device_train_batch_size=batch_size,
         per_device_eval_batch_size=batch_size,
         learning_rate=lr,
         num_train_epochs=epochs,
         weight_decay=0.01,
-        warmup_ratio=0.1,
+        warmup_steps=10,      # remplace warmup_ratio (supprimé dans les versions récentes)
+        fp16=True,            # ~2x plus rapide sur GPU ; ignoré si non supporté
+        bf16=False,
         seed=seed,
         logging_steps=10,
         report_to="none",
@@ -284,8 +285,8 @@ def main(argv=None) -> None:
     p.add_argument("--model-name", default="cis-lmu/glot500-base")
     p.add_argument("--max-length", type=int, default=128)
     p.add_argument("--batch-size", type=int, default=32)
-    p.add_argument("--epochs", type=int, default=6)
-    p.add_argument("--lr", type=float, default=3e-5)
+    p.add_argument("--epochs", type=int, default=8)
+    p.add_argument("--lr", type=float, default=5e-5)
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--keep-all", action="store_true")
     p.add_argument("--push-to-hub", action="store_true")
