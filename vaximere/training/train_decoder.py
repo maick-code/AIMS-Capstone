@@ -23,11 +23,16 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
 
-from .data_prep import load_jsonl, prepare
+# Supporte le lancement en script direct OU en module (cf. train_encoder.py).
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from vaximere.training.data_prep import load_jsonl, prepare  # noqa: E402
 
 INTENTS_STR = (
     "UTILITE_VACCIN, SECURITE_VACCIN, CALENDRIER_RDV, RETARD_RATTRAPAGE, "

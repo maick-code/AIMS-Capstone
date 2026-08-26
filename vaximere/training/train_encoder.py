@@ -25,11 +25,19 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import sys
 from pathlib import Path
 
 import numpy as np
 
-from .data_prep import load_jsonl, prepare
+# Permet de lancer ce fichier SOIT en module (`python -m vaximere.training.train_encoder`),
+# SOIT en script direct (`python vaximere/training/train_encoder.py`) : dans ce
+# dernier cas, la racine du dépôt est ajoutée au sys.path pour que les imports
+# absolus du package fonctionnent.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from vaximere.training.data_prep import load_jsonl, prepare  # noqa: E402
 
 
 # --------------------------------------------------------------------------- #
@@ -66,7 +74,7 @@ def encode(examples, tokenizer, label2id, max_length: int):
 # Métriques
 # --------------------------------------------------------------------------- #
 def compute_metrics(eval_pred, id2label):
-    from sklearn.metrics import accuracy_score, f1_macro, f1_score
+    from sklearn.metrics import accuracy_score, f1_score
 
     logits, labels = eval_pred
     preds = np.argmax(logits, axis=-1)
@@ -274,10 +282,25 @@ def main(argv=None) -> None:
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--keep-all", action="store_true")
     p.add_argument("--push-to-hub", action="store_true")
+    p.add_argument("--push-only", action="store_true",
+                   help="pousse le modèle déjà entraîné (--out/model) sans ré-entraîner")
     p.add_argument("--hub-model-id", default=None)
     args = p.parse_args(argv)
 
     out_dir = Path(args.out)
+    hub_id = args.hub_model_id or "Semence/vaximere-intent-glot500"
+
+    if args.push_only:
+        model_dir = out_dir / "model"
+        if not model_dir.exists():
+            raise SystemExit(f"❌ Modèle introuvable : {model_dir}. Entraînez d'abord (sans --push-only).")
+        metrics = {}
+        metrics_path = out_dir / "metrics.json"
+        if metrics_path.exists():
+            metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+        push_to_hub(model_dir, hub_id, args.model_name, metrics)
+        return
+
     metrics = train(
         Path(args.jsonl), out_dir,
         model_name=args.model_name,
@@ -289,7 +312,6 @@ def main(argv=None) -> None:
         keep_all=args.keep_all,
     )
     if args.push_to_hub:
-        hub_id = args.hub_model_id or "Semence/vaximere-intent-glot500"
         push_to_hub(out_dir / "model", hub_id, args.model_name, metrics)
 
 
